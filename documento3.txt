@@ -2,3 +2,5 @@ documento de prueba
 modificando archivo antes del primer commit
 
 Adding moreeee content
+
+Editando desde VIM
