@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=snowdenrise" alt="snowdenrise" /></a> </p>
 
-<p align="left"> <a href="https://twitter.com/jonatansern" target="blank"><img src="https://img.shields.io/twitter/follow/jonatansern?logo=twitter&style=for-the-badge" alt="jonatansern" /></a> </p>
+<p align="left"> <a href="https://twitter.com/jonatanserna" target="blank"><img src="https://img.shields.io/twitter/follow/jonatansern?logo=twitter&style=for-the-badge" alt="jonatansern" /></a> </p>
 
 - 🔭 I’m currently working on **Lean Solutions Group**
 
