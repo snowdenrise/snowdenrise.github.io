@@ -24,7 +24,7 @@
 
 - 🤝 I’m looking for help with **My Data Analyst Career**
 
-- 👨‍💻 All of my projects are available at (🔗 github.com/snowdenrise)
+- 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://www.github.com/snowdenrise "Snowdenrise").
 
 - 📝 I regularly read articles about **New technologies and Data**
 
@@ -32,7 +32,7 @@
 
 - 📫 How to reach me **jonatansernahiguera@gmail.com**
 
-- 📄 Know about my experiences [https://www.linkedin.com/in/jonatanserna](linkedin.com/in/jonatanserna)
+- 📄 Know about my experiences on [Linkedin.com/in/jonatanserna](https://www.linkedin.com/in/jonatanserna "LinkedIn").
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
