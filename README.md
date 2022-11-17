@@ -1,11 +1,11 @@
 <h1 align="center">Hi 👋, I'm Jonatan</h1>
 <h3 align="center">Detail-focused Data Analyst with knowledge in data warehousing, process validation and business needs analysis. Proven to understand customer requirements and translate into actionable plans. Dedicated and hard-working with passion for Big Data.</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=snowdenrise&label=Profile%20views&color=0e75b6&style=flat" alt="snowdenrise" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=snowdenrise&label=Profile%20views&color=0e75b6&style=flat" alt="snowdenrise" /> </p>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=snowdenrise" alt="snowdenrise" /></a> </p>
+<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=snowdenrise" alt="snowdenrise" /></a> </p>
 
-<p align="left"> <a href="https://twitter.com/jonatanserna" target="blank"><img src="https://img.shields.io/twitter/follow/jonatansern?logo=twitter&style=for-the-badge" alt="jonatansern" /></a> </p>
+<p align="center"> <a href="https://twitter.com/jonatanserna" target="blank"><img src="https://img.shields.io/twitter/follow/jonatanserna?logo=twitter&style=for-the-badge" alt="jonatanserna" /></a> </p>
 
 - 🔭 I’m currently working on **Lean Solutions Group**
 
@@ -48,7 +48,8 @@
 <br>
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=snowdenrise&show_icons=true&locale=en&layout=compact" alt="snowdenrise" /></p>
-
+<br>
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=snowdenrise&show_icons=true&locale=en" alt="snowdenrise" /></p>
-
+<br>
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=snowdenrise&" alt="snowdenrise" /></p>
+<br>
