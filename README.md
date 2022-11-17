@@ -7,7 +7,7 @@
 
 <p align="center"> <a href="https://twitter.com/jonatanserna" target="blank"><img src="https://img.shields.io/twitter/follow/jonatanserna?logo=twitter&style=for-the-badge" alt="jonatanserna" /></a> </p>
 
-- 🔭 I’m currently working on **Lean Solutions Group**
+- 🔭 I’m currently working at **Lean Solutions Group**
 
 - 🌱 I’m currently learning **SQL, Python, Power BI, Tableau, Google Data Studio**
 
@@ -15,9 +15,9 @@
 
 - 🤝 I’m looking for help with **My Data Analyst Career**
 
-- 👨‍💻 All of my projects are available at [snowdenrise.github.io](snowdenrise.github.io)
+- 👨‍💻 All of my projects are available at [snowdenrise](snowdenrise)
 
-- 📝 I regularly read articles about [New technologies](New technologies)
+- 📝 I regularly read articles about [New technologies and Data](New technologies and Data)
 
 - 💬 Ask me about **Data and its analysis**
 
