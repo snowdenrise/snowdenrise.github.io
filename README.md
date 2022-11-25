@@ -26,6 +26,13 @@
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://www.github.com/snowdenrise "Snowdenrise").
 
+- 🎒🏫 All of my studies can be found at:
+       - [Coursera 🔗](https://www.coursera.org/user/2dee353dbb63bba59febf789e83b3cd5).
+       - [Platzi 🔗](https://platzi.com/p/jonatanserna/).
+       - [Udemy 🔗](https://www.udemy.com/user/jonatan-serna-higuera/).
+       
+<img align="center" src="https://user-images.githubusercontent.com/85919098/203879717-9d90bc7d-6e1a-4bd9-8c5b-7ab562e7a5de.gif" alt="Studies" height="27" width="50" />
+
 - 📝 I regularly read articles about **New technologies and Data**
 
 - 💬 Ask me about **data and its analysis**
