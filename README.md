@@ -10,7 +10,7 @@
   <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=snowdenrise" alt="snowdenrise" /></a> 
 </p>
 
-<p align="center"> 
+<p align="center">
   <a href="https://twitter.com/jonatanserna" target="blank">
     <img src="https://img.shields.io/twitter/follow/jonatanserna?logo=twitter&style=for-the-badge" alt="jonatanserna" />
   </a> 
@@ -25,7 +25,6 @@
 - 🤝 I’m looking for help with **My Data Analyst Career**
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://www.github.com/snowdenrise "Snowdenrise").
-
 
 <img align="center" src="https://user-images.githubusercontent.com/85919098/203879717-9d90bc7d-6e1a-4bd9-8c5b-7ab562e7a5de.gif" alt="Studies" height="54" width="100" />
 
