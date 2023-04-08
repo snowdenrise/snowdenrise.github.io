@@ -25,7 +25,7 @@
 - 🤝 I’m looking for help with **My Data and Business Analyst Career**
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").<br>
--📊 [GoogleDataStudio 🔗](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB).´
+        -📊 [GoogleDataStudio 🔗](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB)
 
 
 <br>
