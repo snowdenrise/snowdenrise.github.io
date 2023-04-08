@@ -16,7 +16,7 @@
   </a> 
 </p>
 
-- 🔭 I’m currently working at **Lean Solutions Group**
+- 🔭 I’m currently working at <a href="https://www.leangroup.com/">**Lean Solutions Group**</a>
 
 - 🌱 I’m currently learning **SQL, Python, Power BI, Tableau, Google Data Studio**
 
