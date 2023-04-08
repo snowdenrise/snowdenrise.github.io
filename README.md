@@ -18,13 +18,15 @@
 
 - 🔭 I’m currently working at <a href="https://www.leangroup.com/">**Lean Solutions Group**</a>
 
-- 🌱 I’m currently learning **SQL, Python, Power BI, Tableau, Google Data Studio**
+- 🌱 I don't stop learning more of **SQL, Python, Power BI, Tableau, Google Data Studio**
 
-- 🕺🏻 I’m looking to collaborate on **Big Data projects**
+- 🕺🏻 I’m looking to collaborate on **Big Data, Data Analysis, Data Management, Data Optimization, and related projects**
 
-- 🤝 I’m looking for help with **My Data Analyst Career**
+- 🤝 I’m looking for help with **My Data and Business Analyst Career**
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").
+-- 📊 [Google Data Studio - Project 1 🔗](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB "Google Data Studio").´
+
 
 
 <p align="center">
