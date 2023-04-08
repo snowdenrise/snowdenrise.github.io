@@ -24,9 +24,12 @@
 
 - 🤝 I’m looking for help with **My Data Analyst Career**
 
-- 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://www.github.com/snowdenrise "Snowdenrise").
+- 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").
 
+
+<p align="center">
 <img align="center" src="https://user-images.githubusercontent.com/85919098/203879717-9d90bc7d-6e1a-4bd9-8c5b-7ab562e7a5de.gif" alt="Studies" height="54" width="100" />
+</p>
 
 - 🎒🏫 All of my studies can be found at:
        - [Coursera 🔗](https://www.coursera.org/user/2dee353dbb63bba59febf789e83b3cd5). / 
