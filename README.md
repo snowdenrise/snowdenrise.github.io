@@ -95,15 +95,11 @@
 </p>
 <br>
 <br>
-<br>
-<br>
 
 <p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=snowdenrise&show_icons=true&locale=en&layout=compact" alt="snowdenrise" /></p>
 <br>
 <br>
-<br>
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=snowdenrise&show_icons=true&locale=en" alt="snowdenrise" /></p>
-<br>
 <br>
 <br>
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=snowdenrise&" alt="snowdenrise" /></p>
