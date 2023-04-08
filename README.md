@@ -25,10 +25,10 @@
 - 🤝 I’m looking for help with **My Data and Business Analyst Career**
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").<br>
--📊 [GoogleDataStudio 🔗](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB "GoogleDataStudio").´
+-📊 [GoogleDataStudio 🔗](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB).´
 
 
-
+<br>
 <p align="center">
 <a href="https://github.com/snowdenrise/snowdenrise.github.io">
 <img align="center" src="https://user-images.githubusercontent.com/85919098/203879717-9d90bc7d-6e1a-4bd9-8c5b-7ab562e7a5de.gif" alt="Studies" height="108" width="200" />
@@ -36,9 +36,9 @@
 </p>
 
 - 🎒🏫 All of my studies can be found at:
-       - [Coursera 🔗](https://www.coursera.org/user/2dee353dbb63bba59febf789e83b3cd5). / 
-       - [Platzi 🔗](https://platzi.com/p/jonatanserna/). / 
-       - [Udemy 🔗](https://www.udemy.com/user/jonatan-serna-higuera/).
+       - [Coursera 🔗](https://www.coursera.org/user/2dee353dbb63bba59febf789e83b3cd5) 
+       - [Platzi 🔗](https://platzi.com/p/jonatanserna/) 
+       - [Udemy 🔗](https://www.udemy.com/user/jonatan-serna-higuera/)
 
 - 📝 I regularly read articles about **New technologies and Data**
 
