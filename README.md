@@ -28,7 +28,7 @@
 
 
 <p align="center">
-<img align="center" src="https://user-images.githubusercontent.com/85919098/203879717-9d90bc7d-6e1a-4bd9-8c5b-7ab562e7a5de.gif" alt="Studies" height="54" width="100" />
+<img align="center" src="https://user-images.githubusercontent.com/85919098/203879717-9d90bc7d-6e1a-4bd9-8c5b-7ab562e7a5de.gif" alt="Studies" height="108" width="200" />
 </p>
 
 - 🎒🏫 All of my studies can be found at:
