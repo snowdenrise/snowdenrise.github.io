@@ -25,15 +25,15 @@
 - 🤝 I’m looking for help with **My Data and Business Analyst Career**
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").<br>
-        -📊 [Google Data Studio 🔗](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB)
-        -📊 [Tableau 🔗](https://public.tableau.com/app/profile/jonatan1623)
-        -📊 [Power BI Community 🔗](https://community.powerbi.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery)
-        -📊 [Amazon Web Services 🔗](https://aws.amazon.com/)
-        -📊 [Google Cloud Platform 🔗](https://cloud.google.com/)
-        -📊 [Microsoft Azure 🔗](https://azure.microsoft.com/)
-        -📊 [R Studio 🔗](https://posit.cloud/)
-        -📊 [Python 🔗](https://dash.gallery/Portal/)
-        -📊 [SQL 🔗](https://www.mysql.com/)
+        -📊 [Google Data Studio](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB)
+        -📊 [Tableau](https://public.tableau.com/app/profile/jonatan1623)
+        -📊 [Power BI Community](https://community.powerbi.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery)
+        -📊 [Amazon Web Services](https://aws.amazon.com/)
+        -📊 [Google Cloud Platform](https://cloud.google.com/)
+        -📊 [Microsoft Azure](https://azure.microsoft.com/)
+        -📊 [R Studio](https://posit.cloud/)
+        -📊 [Python](https://dash.gallery/Portal/)
+        -📊 [SQL](https://www.mysql.com/)
 
 
 <br>
