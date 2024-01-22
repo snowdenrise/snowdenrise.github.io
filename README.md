@@ -27,8 +27,8 @@
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").<br>
         -<img align="center" src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" alt="logo" height="20" width="20" /> [Google Data Studio](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB) <br>
         -<img align="center" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.tableau.com/&size=16" alt="logo" height="20" width="20" /> [Tableau](https://public.tableau.com/app/profile/jonatan1623) <br>
-        -<img align="center" src="https://app.powerbi.com/13.0.22352.90/images/PowerBI_MasterLogo.svg" alt="logo" height="20" width="20" /> [Power BI Community](https://community.powerbi.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery) <br>
-        -<img align="center" src="https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35@2x.png" alt="logo" height="20" width="20" /> [Amazon Web Services](https://aws.amazon.com/) <br>
+        -<img align="center" src="https://app.powerbi.com/13.0.22352.90/images/PowerBI_MasterLogo.svg" alt="logo" height="15" width="20" /> [Power BI Community](https://community.powerbi.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery) <br>
+        -<img align="center" src="https://a0.awsstatic.com/libra-css/images/logos/aws_smile-header-desktop-en-white_59x35@2x.png" alt="logo" height="15" width="20" /> [Amazon Web Services](https://aws.amazon.com/) <br>
         -<img align="center" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.python.org/&size=16" alt="logo" height="20" width="20" /> [Python](https://dash.gallery/Portal/) <br>
         -📊 [SQL](https://www.mysql.com/) <br>
 
