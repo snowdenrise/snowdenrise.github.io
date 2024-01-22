@@ -26,15 +26,14 @@
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").<br>
         -<a href="https://www.wizeline.com/"> <img align="center" src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" alt="logo" height="20" width="20" /> [Google Data Studio](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB) <br>
-        -📊 [Tableau](https://public.tableau.com/app/profile/jonatan1623)
-        -📊 [Power BI Community](https://community.powerbi.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery)
-        -📊 [Amazon Web Services](https://aws.amazon.com/)
-        -📊 [Google Cloud Platform](https://cloud.google.com/)
-        -📊 [Microsoft Azure](https://azure.microsoft.com/)
-        -📊 [R Studio](https://posit.cloud/)
-        -📊 [Python](https://dash.gallery/Portal/)
-        -📊 [SQL](https://www.mysql.com/)
-
+        -📊 [Tableau](https://public.tableau.com/app/profile/jonatan1623) <br>
+        -📊 [Power BI Community](https://community.powerbi.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery) <br>
+        -📊 [Amazon Web Services](https://aws.amazon.com/) <br>
+        -📊 [Google Cloud Platform](https://cloud.google.com/) <br>
+        -📊 [Microsoft Azure](https://azure.microsoft.com/) <br>
+        -📊 [R Studio](https://posit.cloud/) <br>
+        -📊 [Python](https://dash.gallery/Portal/) <br>
+        -📊 [SQL](https://www.mysql.com/) <br>
 
 <br>
 <p align="center">
