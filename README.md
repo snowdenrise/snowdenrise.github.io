@@ -25,7 +25,7 @@
 - 🤝 I’m looking for help with **My Data and Business Analyst Career**
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").<br>
-        -📊 <a href="https://www.wizeline.com/"> <img align="center" src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svghttps://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.wizeline.com&size=16" alt="logo" height="20" width="20" /> [Google Data Studio](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB)
+        -📊 <a href="https://www.wizeline.com/"> <img align="center" src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" alt="logo" height="20" width="20" /> [Google Data Studio](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB)
         -📊 [Tableau](https://public.tableau.com/app/profile/jonatan1623)
         -📊 [Power BI Community](https://community.powerbi.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery)
         -📊 [Amazon Web Services](https://aws.amazon.com/)
