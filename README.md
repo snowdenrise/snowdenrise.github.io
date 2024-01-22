@@ -22,7 +22,7 @@
 
 - 🕺🏻 I’m looking to collaborate on **Big Data, Data Analysis, Data Management, Data Optimization, and related projects**
 
-- 🤝 I’m looking for help with **My Data and Business Analyst Career**
+- 🤝 I’m looking for help with **My Data, Business Analyst, and Developer careers**
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").<br>
         -<img align="center" src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" alt="logo" height="20" width="20" /> [Google Data Studio](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB) <br>
