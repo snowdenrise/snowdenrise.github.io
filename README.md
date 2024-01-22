@@ -16,7 +16,7 @@
   </a> 
 </p>
 
-- 🔭 I’m currently working at <a href="https://www.leangroup.com/">**Lean Solutions Group**</a>
+- 🔭 I’m currently working at <a href="https://www.wizeline.com/"> <img align="center" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.wizeline.com&size=16" alt="logo" height="15" width="15" />**Wizeline**</a>
 
 - 🌱 I don't stop learning more of **SQL, Python, Power BI, Tableau, Google Data Studio**
 
