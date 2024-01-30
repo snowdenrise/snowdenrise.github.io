@@ -39,7 +39,7 @@
 </a>
 </p>
 
-- 🎒🏫 All of my studies can be found at:
+- 🎒🏫 Some of my certificates can be found at:
        - [Coursera 🔗](https://www.coursera.org/user/2dee353dbb63bba59febf789e83b3cd5) 
        - [Platzi 🔗](https://platzi.com/p/jonatanserna/) 
        - [Udemy 🔗](https://www.udemy.com/user/jonatan-serna-higuera/)
