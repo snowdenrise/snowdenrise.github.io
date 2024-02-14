@@ -52,6 +52,8 @@
 
 - 📄 Know about my experiences on [Linkedin.com/in/jonatanserna](https://www.linkedin.com/in/jonatanserna "LinkedIn").
 
+- 📆 Meet me [Calendly (Set a meeting up with me)](https://calendly.com/jonatansernahiguera "Calendly").
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://twitter.com/jonatanserna" target="blank">
