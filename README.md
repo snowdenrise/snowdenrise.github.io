@@ -32,6 +32,8 @@
         -<img align="center" src="https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.python.org/&size=16" alt="logo" height="20" width="20" /> [Python](https://dash.gallery/Portal/) <br>
         -📊 [SQL](https://www.mysql.com/) <br>
         -<img align="center" src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="logo" height="20" width="20" /> [Figma (UX-UI)](https://www.figma.com/team_invite/redeem/VGeuMnVUs3vIGtaimvZwTt) <br>
+        -<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tabler-icons_brand-dribbble-filled.svg" alt="logo" height="20" width="20" /> [Dribble](https://dribbble.com/jonatanserna) <br>
+        -<img align="center" src="https://upload.wikimedia.org/wikipedia/commons/5/58/Behance_while_icon.svg" alt="logo" height="20" width="20" /> [Behance](https://www.behance.net/jonatanserna) <br>
         
 
 <br>
