@@ -117,3 +117,9 @@
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=snowdenrise&" alt="snowdenrise" /></p>
 <br>
 <br>
+
+
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+<div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jonatanserna" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/jonatanserna/en?trk=profile-badge">Jonatan Serna</a></div>
+              
