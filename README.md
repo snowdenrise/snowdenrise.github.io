@@ -3,6 +3,10 @@
 </p>
 
 <h1 align="center">Hi 👋, I'm Jonatan</h1>
+
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+<div align="left" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="jonatanserna" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/jonatanserna/en?trk=profile-badge">Jonatan Serna</a></div>
+              
 <h3 align="center">Detail-focused Data Analyst with knowledge in data warehousing, process validation and business needs analysis. Proven to understand customer requirements and translate into actionable plans. Dedicated and hard-working with passion for Big Data.</h3>
 
 
