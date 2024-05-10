@@ -17,13 +17,13 @@
   </a> 
 </p>
 
-- 🔭 I’m currently working at <a href="https://www.wizeline.com/"> <img align="center" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.wizeline.com&size=16" alt="logo" height="20" width="20" />  **Holafly**</a>, and as a **Freelancer**, feel free to contact me.
+- 🔭 I’m currently working at <a href="https://www.esim.holafly.com/"> <img align="center" src="[https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.wizeline.com&size=16](https://tzgvp7n8bz3v-u4239.pressidiumcdn.com/wp-content/uploads/2020/05/cropped-favicon-192x192.png)" alt="logo" height="20" width="20" />  **Holafly**</a>, and as a **Freelancer**, feel free to contact me.
 
-- 🌱 I don't stop learning more of **SQL, Python, Power BI, Tableau, Google Data Studio**
+- 🌱 I don't stop learning more of **SQL, Python, Power BI, Tableau, Google Data Studio, BI tools, and UXR topics**
 
-- 🕺🏻 I’m looking to collaborate on **Big Data, Data Analysis, Data Management, Data Optimization, and related projects**
+- 🕺🏻 I’m looking to collaborate on **Big Data, Data Analysis, Data Management, Data Optimization, Design, Research and related projects**
 
-- 🤝 I’m looking for help with **My Data, Business Analyst, and Developer careers**
+- 🤝 I’m looking for help with **My Data, Business Analyst, UX Researcher and Developer career**
 
 - 👨‍💻 All of my projects are available at [github.com/snowdenrise 🔗](https://github.com/snowdenrise/ "Snowdenrise").<br>
         -<img align="center" src="https://www.gstatic.com/analytics-lego/svg/ic_looker_studio.svg" alt="logo" height="20" width="20" /> [Google Data Studio](https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1/page/t5EBB) <br>
@@ -49,11 +49,11 @@
        - [Platzi 🔗](https://platzi.com/p/jonatanserna/) 
        - [Udemy 🔗](https://www.udemy.com/user/jonatan-serna-higuera/)
 
-- 📝 I regularly read articles about **New technologies and Data**
+- 📝 I regularly read articles about **New technologies, design and Data**
 
-- 💬 Ask me about **data and its analysis**
+- 💬 Ask me about **data, design and its analysis**
 
-- 📫 How to reach me **jonatansernahiguera@gmail.com**
+- 📫 How to reach me? here >>> **jonatansernahiguera@gmail.com**
 
 - 📄 Know about my experiences on [Linkedin.com/in/jonatanserna](https://www.linkedin.com/in/jonatanserna "LinkedIn").
 
