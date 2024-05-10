@@ -3,9 +3,6 @@
 </p>
 
 <h1 align="center">Hi 👋, I'm Jonatan</h1>
-
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-<div align="left" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="jonatanserna" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/jonatanserna/en?trk=profile-badge">Jonatan Serna</a></div>
               
 <h3 align="center">Detail-focused Data Analyst with knowledge in data warehousing, process validation and business needs analysis. Proven to understand customer requirements and translate into actionable plans. Dedicated and hard-working with passion for Big Data.</h3>
 
@@ -20,7 +17,7 @@
   </a> 
 </p>
 
-- 🔭 I’m currently working at <a href="https://www.wizeline.com/"> <img align="center" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.wizeline.com&size=16" alt="logo" height="20" width="20" />  **Wizeline**</a>, and as a **Freelancer**, feel free to contact me.
+- 🔭 I’m currently working at <a href="https://www.wizeline.com/"> <img align="center" src="https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.wizeline.com&size=16" alt="logo" height="20" width="20" />  **Holafly**</a>, and as a **Freelancer**, feel free to contact me.
 
 - 🌱 I don't stop learning more of **SQL, Python, Power BI, Tableau, Google Data Studio**
 
