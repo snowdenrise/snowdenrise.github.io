@@ -4,7 +4,7 @@
 
 <h1 align="center">Hi 👋, I'm Jonatan</h1>
               
-<h3 align="center">Detail-focused Data Analyst with knowledge in data warehousing, process validation and business needs analysis. Proven to understand customer requirements and translate into actionable plans. Dedicated and hard-working with passion for Big Data.</h3>
+<h3 align="center">Detail-focused UX Researcher Data Analyst with knowledge in data warehousing, process validation, design process, UX/UI and business needs analysis. Proven to understand customer requirements and translate into actionable plans. Dedicated and hard-working with passion for data, design, research and user experience topics.</h3>
 
 
 <p align="center"> 
@@ -17,7 +17,7 @@
   </a> 
 </p>
 
-- 🔭 I’m currently working at <a href="https://www.esim.holafly.com/"> <img align="center" src="[https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://www.wizeline.com&size=16](https://tzgvp7n8bz3v-u4239.pressidiumcdn.com/wp-content/uploads/2020/05/cropped-favicon-192x192.png)" alt="logo" height="20" width="20" />  **Holafly**</a>, and as a **Freelancer**, feel free to contact me.
+- 🔭 I’m currently working at <a href="https://www.esim.holafly.com/"> <img align="center" src="https://tzgvp7n8bz3v-u4239.pressidiumcdn.com/wp-content/uploads/2020/05/cropped-favicon-192x192.png" alt="logo" height="20" width="20" />  **Holafly**</a>, and as a **Freelancer**, feel free to contact me.
 
 - 🌱 I don't stop learning more of **SQL, Python, Power BI, Tableau, Google Data Studio, BI tools, and UXR topics**
 
