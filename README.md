@@ -17,7 +17,7 @@
   </a> 
 </p>
 
-- 🔭 I’m currently working at <a href="https://www.esim.holafly.com/"> <img align="center" src="/h_animated.gif" alt="logo" height="20" width="20" />  **Holafly**</a>, and as a **Freelancer**, feel free to contact me.
+- 🔭 I’m currently working at <a href="https://www.esim.holafly.com/"> <img align="center" src="h_animated.gif" alt="logo" height="20" width="20" />  **Holafly**</a>, and as a **Freelancer**, feel free to contact me.
 
 - 🌱 I don't stop learning more of **SQL, Python, Power BI, Tableau, Google Data Studio, BI tools, and UXR topics**
 
