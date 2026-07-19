@@ -3,6 +3,12 @@
 </p>
 
 <h1 align="center">Hi 👋, I'm Jonatan</h1>
+
+<p align="center">
+  <a href="https://github.com/sponsors/snowdenrise" target="_blank">
+    <img src="https://img.shields.io/badge/Sponsor-❤-ff69b4?style=for-the-badge&logo=github" alt="Sponsor Jonatan" />
+  </a>
+</p>
               
 <h3 align="center">Detail-focused UX Researcher Data Analyst with knowledge in data warehousing, process validation, design process, UX/UI and business needs analysis. Proven to understand customer requirements and translate into actionable plans. Dedicated and hard-working with passion for data, design, research and user experience topics.</h3>
 

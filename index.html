@@ -1,45 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenidos a Hyperblog 2.0</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jonatan Serna — UX Researcher & Data Analyst</title>
+  <meta name="description" content="Jonatan Serna — UX Researcher & Data Analyst. SQL, Python, Power BI, Tableau, Google Data Studio, UX Research, Data Warehousing">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#0069ff;--muted:#94a3b8;color-scheme:dark}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,system-ui,Arial;background:linear-gradient(180deg,#071022 0%, #081428 60%);color:#e6eef8}
+    .wrap{max-width:960px;margin:40px auto;padding:28px}
+    header{display:flex;gap:20px;align-items:center}
+    .avatar{width:120px;height:120px;border-radius:12px;flex:0 0 120px;overflow:hidden;border:3px solid rgba(255,255,255,.06)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .hero h1{margin:0;font-size:28px}
+    .hero p.lead{margin:6px 0 12px;color:var(--muted)}
+    .badges{display:flex;gap:8px;flex-wrap:wrap}
+    .card{background:rgba(255,255,255,.03);padding:18px;border-radius:12px;margin-top:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
+    ul.skills li{background:rgba(255,255,255,.04);padding:8px 10px;border-radius:8px;font-size:14px}
+    .cta{margin-top:14px}
+    a.btn{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none}
+    footer{margin-top:28px;color:var(--muted);font-size:13px}
+    @media (max-width:600px){header{flex-direction:column;align-items:flex-start}.avatar{width:96px;height:96px}}
+  </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9NG8NTTQR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-        gtag('config', 'G-W9NG8NTTQR');
-        </script>-->
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
 <body>
-<div align="left" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="jonatanserna" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/jonatanserna/en?trk=profile-badge">Jonatan Serna</a></div>
-  <div id="container">
-      <div id="cabecera">Hyperblog
-        <span id="tagline">
-          Tu Blog de cabecera
-        </span>
+  <main class="wrap">
+    <header>
+      <div class="avatar"><img src="https://github.com/snowdenrise.png" alt="Jonatan Serna"></div>
+      <div class="hero">
+        <h1>Jonatan Serna — UX Researcher & Data Analyst</h1>
+        <p class="lead">Detail-focused researcher combining data engineering, analytics and human-centered design to solve product problems.</p>
+        <div class="badges">
+          <a class="btn" href="mailto:jonatansernahiguera@gmail.com">Email</a>
+          <a class="btn" href="https://www.linkedin.com/in/jonatanserna" target="_blank">LinkedIn</a>
+          <a class="btn" href="https://calendly.com/jonatansernahiguera" target="_blank">Book time</a>
+          <a class="btn" href="https://github.com/sponsors/snowdenrise" target="_blank">Sponsor</a>
+        </div>
       </div>
-      <div id="post">
-        <h1>Titulo llamativo</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima molestias voluptas soluta nihil quia eum debitis voluptate! Corporis iusto soluta accusamus vitae quod cupiditate numquam, sequi dolor harum, sint accusantium.</p>
-        <p>Agregamos contenido al body de este blog para que se puedan hacer los merges</p>
-        <p>Agregando aun mas contenido</p>
-        <p>Añadiendo otro parrafoooooooooooooooooooooo</p>
-        <p>Suscribete y dale like!</p>
-      </div>
-  </div>
+    </header>
 
-<!-- Calendly badge widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/jonatansernahiguera?hide_gdpr_banner=1', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
-<!-- Calendly badge widget end -->
+    <section class="card">
+      <h2>About</h2>
+      <p>UX Researcher & Data Analyst with experience in SQL, Python, Power BI, Tableau and data warehousing. Skilled at turning research and analytics into product-ready insights.</p>
+      <div class="grid">
+        <div>
+          <h3>Skills</h3>
+          <ul class="skills">
+            <li>SQL</li><li>Python (pandas)</li><li>Power BI</li><li>Tableau</li><li>Google Data Studio</li>
+            <li>UX Research</li><li>Figma</li><li>Data Warehousing</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Highlights</h3>
+          <ul>
+            <li>Currently at Holafly — UX Researcher & Data Analyst</li>
+            <li>Public dashboards and visualizations (Tableau, Looker Studio)</li>
+            <li>Certificates: Coursera, Platzi, Udemy</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <div>
+          <strong>GitHub</strong>
+          <p><a href="https://github.com/snowdenrise" target="_blank">github.com/snowdenrise</a></p>
+        </div>
+        <div>
+          <strong>Tableau</strong>
+          <p><a href="https://public.tableau.com/app/profile/jonatan1623" target="_blank">Public Profile</a></p>
+        </div>
+        <div>
+          <strong>Looker Studio</strong>
+          <p><a href="https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1" target="_blank">Interactive Dashboards</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Get in touch</h2>
+      <p>Email: <a href="mailto:jonatansernahiguera@gmail.com">jonatansernahiguera@gmail.com</a></p>
+      <p>More: <a href="https://www.behance.net/jonatanserna">Behance</a> • <a href="https://dribbble.com/jonatanserna">Dribbble</a></p>
+    </section>
+
+    <footer>
+      <p>Built with ❤️ — <a href="https://github.com/snowdenrise/snowdenrise.github.io" target="_blank">Repository</a></p>
+    </footer>
+  </main>
+
+  <!-- LinkedIn profile badge (keeps privacy: just link) -->
+  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 </html>
