@@ -60,6 +60,7 @@
     .skill.active{background:rgba(139,92,246,0.16);border-color:rgba(139,92,246,0.24)}
     .search{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);color:var(--text);margin-bottom:10px}
     .search::placeholder{color:#8aa0b8}
+    .cert-action{display:flex;justify-content:flex-end;margin-top:10px}
     .list{display:grid;gap:10px;margin-top:12px}
     .list-item{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07)}
     .list-item a{color:#8edbff;text-decoration:none}
@@ -124,6 +125,11 @@
       </div>
 
       <aside>
+        <div class="card" style="margin-bottom:20px" id="contact-card">
+          <h3 id="contact-title">Contact</h3>
+          <div class="contact" id="contact-list"></div>
+        </div>
+
         <div class="card" id="skills">
           <h3 id="skills-title">Skills</h3>
           <input class="search" id="skillFilter" placeholder="Filter skills" oninput="filterSkills()">
@@ -137,17 +143,14 @@
 
         <div class="card" id="certs" style="margin-top:20px">
           <h3 id="certifications-title">Certifications</h3>
+          <input class="search" id="certFilter" placeholder="Search certifications" oninput="updateCertFilter()">
           <div class="list" id="cert-list"></div>
+          <div class="cert-action" id="cert-action"></div>
         </div>
 
         <div class="card" id="courses" style="margin-top:20px">
           <h3 id="courses-title">Courses</h3>
           <div class="list" id="courses-list"></div>
-        </div>
-
-        <div class="card" style="margin-top:20px">
-          <h3 id="contact-title">Contact</h3>
-          <div class="contact" id="contact-list"></div>
         </div>
       </aside>
     </section>
@@ -183,6 +186,9 @@
           linkedin: 'LinkedIn',
           sponsor: 'Sponsor on GitHub',
           filterPlaceholder: 'Filter skills',
+          certFilterPlaceholder: 'Search certifications',
+          showMoreCerts: 'Show all certifications',
+          showLessCerts: 'Show fewer certifications',
           footer: 'Interactive CV built for GitHub Pages with a polished profile experience.'
         },
         stats: {
@@ -206,44 +212,45 @@
           'Cloud Computing','Design','Adobe Analytics','Revit','Autodesk 3ds Max','Enscape','Blender','Autodesk Maya','AutoCAD','CorelDRAW','Data Visualization','Google Analytics','Google Ads','Google Sheets','User Interface (UI)','User Experience Research (UXR)','Figma','JavaScript','HTML','HTML5','CSS','Data Analysis','Python','Tableau','SQL','Microsoft Power BI','Pandas','Looker','Agile Methodologies','Alteryx','Power BI','UX Research','Microsoft Excel'
         ],
         certs: [
-          {name:'Google Data Analytics',authority:'Google / Coursera',url:'https://www.coursera.org'},
+          {name:'Google Data Analytics',authority:'Google / Coursera',url:'https://www.coursera.org/account/accomplishments/specialization/certificate/RL77SVQ23W6K'},
           {name:'EF SET English Certificate (C1 Advanced)',authority:'EF SET',url:'https://www.efset.org/cert/rNnBkv'},
-          {name:'Microsoft Excel Professional',authority:'Udemy',url:'https://www.udemy.com/'},
-          {name:'Power BI Essentials',authority:'Udemy',url:'https://www.udemy.com/'},
-          {name:'Tableau Essentials',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'SQL for Data Analysis',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Google Analytics Basics',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Power BI Dashboards and Reports',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Power BI Tricks and Techniques',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Figma for UX',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Agile User Experience Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Adobe Analytics Fundamentals',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'UX Research Foundations',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
-          {name:'Market Research',authority:'IE Business School',url:'https://www.ie.edu/'},
-          {name:'UX Writing',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
-          {name:'ConfOps 25: DesignOps',authority:'DesignOps Lab',url:'https://www.designopslab.com/'},
-          {name:'Conducting UX Research',authority:'Google',url:'https://www.google.com/'},
-          {name:'Data Protection and Governance',authority:'Platzi',url:'https://platzi.com/'},
-          {name:'Designing for Accessibility',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Adobe XD for Product Design',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Digital Logistics & Distribution',authority:'Cámara de Comercio',url:'https://drive.google.com'},
-          {name:'Basic Photography',authority:'Udemy',url:'https://www.udemy.com/'},
-          {name:'Adobe Certification',authority:'Certiport Latam',url:'https://www.certiport.com/'},
-          {name:'Lean Six Sigma White Belt',authority:'Minitab',url:'https://www.minitab.com/'},
-          {name:'Intro to UX for Product',authority:'Meta',url:'https://www.meta.com/'},
-          {name:'University Virtual Course',authority:'Sociedad Civil',url:'https://drive.google.com'},
-          {name:'UX/UI Design',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
-          {name:'UX Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Programming Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'MySQL Essentials',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Penetration Testing Fundamentals',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Learning Big Data',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Design Thinking',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'UX Design Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Google Foundations',authority:'Google',url:'https://www.google.com/'},
-          {name:'Preparing Data',authority:'Microsoft',url:'https://www.microsoft.com/'},
-          {name:'Harnessing Data',authority:'Microsoft',url:'https://www.microsoft.com/'},
-          {name:'Realistic Rendering',authority:'Jacobsen3D',url:'https://www.jacobsen3d.com/'}
+          {name:'Microsoft Excel Professional',authority:'Udemy',url:''},
+          {name:'Power BI Essentials',authority:'Udemy',url:''},
+          {name:'Tableau Essentials',authority:'LinkedIn Learning',url:''},
+          {name:'SQL for Data Analysis',authority:'LinkedIn Learning',url:''},
+          {name:'Google Analytics Basics',authority:'LinkedIn Learning',url:''},
+          {name:'Power BI Dashboards & Reports',authority:'LinkedIn Learning',url:''},
+          {name:'Power BI Tricks & Techniques',authority:'LinkedIn Learning',url:''},
+          {name:'Figma for UX',authority:'LinkedIn Learning',url:''},
+          {name:'Agile User Experience Foundations',authority:'LinkedIn Learning',url:''},
+          {name:'Adobe Analytics Fundamentals',authority:'LinkedIn Learning',url:''},
+          {name:'UX Design Foundations',authority:'LinkedIn Learning',url:''},
+          {name:'UX Foundations',authority:'LinkedIn Learning',url:''},
+          {name:'Programming Foundations',authority:'LinkedIn Learning',url:''},
+          {name:'MySQL Essentials',authority:'LinkedIn Learning',url:''},
+          {name:'Penetration Testing Fundamentals',authority:'LinkedIn Learning',url:''},
+          {name:'Designing for Accessibility',authority:'LinkedIn Learning',url:''},
+          {name:'Adobe XD for Product Design',authority:'LinkedIn Learning',url:''},
+          {name:'Learning Analytics',authority:'LinkedIn Learning',url:''},
+          {name:'Design Thinking',authority:'LinkedIn Learning',url:''},
+          {name:'Design for UX',authority:'LinkedIn Learning',url:''},
+          {name:'Intro to UX for Product',authority:'Meta',url:''},
+          {name:'Google Foundations',authority:'Google',url:''},
+          {name:'Conducting UX Research',authority:'Google',url:''},
+          {name:'Preparing Data',authority:'Microsoft',url:''},
+          {name:'Harnessing Data',authority:'Microsoft',url:''},
+          {name:'UX Research Foundations',authority:'Coderhouse',url:''},
+          {name:'UX Writing',authority:'Coderhouse',url:''},
+          {name:'UX/UI Design',authority:'Coderhouse',url:''},
+          {name:'Market Research',authority:'IE Business School',url:''},
+          {name:'ConfOps 25: DesignOps',authority:'DesignOps Lab',url:''},
+          {name:'Data Protection and Governance',authority:'Platzi',url:''},
+          {name:'Digital Logistics & Distribution',authority:'Cámara de Comercio',url:''},
+          {name:'Adobe Certification',authority:'Certiport Latam',url:''},
+          {name:'Lean Six Sigma White Belt',authority:'Minitab',url:''},
+          {name:'University Virtual Course',authority:'Sociedad Civil',url:''},
+          {name:'Basic Photography',authority:'Udemy',url:''},
+          {name:'Realistic Rendering',authority:'Jacobsen3D',url:''}
         ],
         courses: [
           {name:'UX/UI Design',provider:'Coderhouse',year:'2024'},
@@ -301,6 +308,9 @@
           linkedin: 'LinkedIn',
           sponsor: 'Patrocinar en GitHub',
           filterPlaceholder: 'Filtrar habilidades',
+          certFilterPlaceholder: 'Buscar certificaciones',
+          showMoreCerts: 'Mostrar todas las certificaciones',
+          showLessCerts: 'Mostrar menos certificaciones',
           footer: 'CV interactivo creado para GitHub Pages con una experiencia de perfil más pulida.'
         },
         stats: {
@@ -326,42 +336,42 @@
         certs: [
           {name:'Google Data Analytics',authority:'Google / Coursera',url:'https://www.coursera.org/account/accomplishments/specialization/certificate/RL77SVQ23W6K'},
           {name:'Certificado EF SET English (C1 Advanced)',authority:'EF SET',url:'https://www.efset.org/cert/rNnBkv'},
-          {name:'Microsoft Excel Professional',authority:'Udemy',url:'https://www.udemy.com/'},
-          {name:'Power BI Essentials',authority:'Udemy',url:'https://www.udemy.com/'},
-          {name:'Tableau Essentials',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'SQL for Data Analysis',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Google Analytics Basics',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Power BI Dashboards & Reports',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Power BI Tricks & Techniques',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Figma for UX',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Agile User Experience Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Adobe Analytics Fundamentals',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'UX Research Foundations',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
-          {name:'Market Research',authority:'IE Business School',url:'https://www.ie.edu/'},
-          {name:'UX Writing',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
-          {name:'ConfOps 25: DesignOps',authority:'DesignOps Lab',url:'https://www.designopslab.com/'},
-          {name:'Conducting UX Research',authority:'Google',url:'https://www.google.com/'},
-          {name:'Data Protection & Governance',authority:'Platzi',url:'https://platzi.com/'},
-          {name:'Designing for Accessibility',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Adobe XD for Product Design',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Digital Logistics & Distribution',authority:'Cámara de Comercio',url:'https://drive.google.com'},
-          {name:'Basic Photography',authority:'Udemy',url:'https://www.udemy.com/'},
-          {name:'Adobe Certification',authority:'Certiport Latam',url:'https://www.certiport.com/'},
-          {name:'Lean Six Sigma White Belt',authority:'Minitab',url:'https://www.minitab.com/'},
-          {name:'Intro to UX for Product',authority:'Meta',url:'https://www.meta.com/'},
-          {name:'University Virtual Course',authority:'Sociedad Civil',url:'https://drive.google.com'},
-          {name:'UX/UI Design',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
-          {name:'UX Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Programming Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'MySQL Essentials',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Penetration Testing Fundamentals',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Learning Big Data',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Design Thinking',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'UX Design Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
-          {name:'Google Foundations',authority:'Google',url:'https://www.google.com/'},
-          {name:'Preparing Data',authority:'Microsoft',url:'https://www.microsoft.com/'},
-          {name:'Harnessing Data',authority:'Microsoft',url:'https://www.microsoft.com/'},
-          {name:'Realistic Rendering',authority:'Jacobsen3D',url:'https://www.jacobsen3d.com/'}
+          {name:'Microsoft Excel Professional',authority:'Udemy',url:''},
+          {name:'Power BI Essentials',authority:'Udemy',url:''},
+          {name:'Tableau Essentials',authority:'LinkedIn Learning',url:''},
+          {name:'SQL for Data Analysis',authority:'LinkedIn Learning',url:''},
+          {name:'Google Analytics Basics',authority:'LinkedIn Learning',url:''},
+          {name:'Power BI Dashboards & Reports',authority:'LinkedIn Learning',url:''},
+          {name:'Power BI Tricks & Techniques',authority:'LinkedIn Learning',url:''},
+          {name:'Figma for UX',authority:'LinkedIn Learning',url:''},
+          {name:'Agile User Experience Foundations',authority:'LinkedIn Learning',url:''},
+          {name:'Adobe Analytics Fundamentals',authority:'LinkedIn Learning',url:''},
+          {name:'UX Research Foundations',authority:'Coderhouse',url:''},
+          {name:'Market Research',authority:'IE Business School',url:''},
+          {name:'UX Writing',authority:'Coderhouse',url:''},
+          {name:'ConfOps 25: DesignOps',authority:'DesignOps Lab',url:''},
+          {name:'Conducting UX Research',authority:'Google',url:''},
+          {name:'Data Protection & Governance',authority:'Platzi',url:''},
+          {name:'Designing for Accessibility',authority:'LinkedIn Learning',url:''},
+          {name:'Adobe XD for Product Design',authority:'LinkedIn Learning',url:''},
+          {name:'Digital Logistics & Distribution',authority:'Cámara de Comercio',url:''},
+          {name:'Basic Photography',authority:'Udemy',url:''},
+          {name:'Adobe Certification',authority:'Certiport Latam',url:''},
+          {name:'Lean Six Sigma White Belt',authority:'Minitab',url:''},
+          {name:'Intro to UX for Product',authority:'Meta',url:''},
+          {name:'University Virtual Course',authority:'Sociedad Civil',url:''},
+          {name:'UX/UI Design',authority:'Coderhouse',url:''},
+          {name:'UX Foundations',authority:'LinkedIn Learning',url:''},
+          {name:'Programming Foundations',authority:'LinkedIn Learning',url:''},
+          {name:'MySQL Essentials',authority:'LinkedIn Learning',url:''},
+          {name:'Penetration Testing Fundamentals',authority:'LinkedIn Learning',url:''},
+          {name:'Learning Big Data',authority:'LinkedIn Learning',url:''},
+          {name:'Design Thinking',authority:'LinkedIn Learning',url:''},
+          {name:'UX Design Foundations',authority:'LinkedIn Learning',url:''},
+          {name:'Google Foundations',authority:'Google',url:''},
+          {name:'Preparing Data',authority:'Microsoft',url:''},
+          {name:'Harnessing Data',authority:'Microsoft',url:''},
+          {name:'Realistic Rendering',authority:'Jacobsen3D',url:''}
         ],
         courses: [
           {name:'Diseño UX/UI',provider:'Coderhouse',year:'2024'},
@@ -398,6 +408,9 @@
     };
 
     let currentLang = 'en';
+    let certFilter = '';
+    let showAllCerts = false;
+    const certDisplayLimit = 8;
 
     function render() {
       const data = translations[currentLang];
@@ -458,12 +471,33 @@
 
       const certList = document.getElementById('cert-list');
       certList.innerHTML = '';
-      data.certs.forEach((c) => {
+      const visibleCerts = data.certs.filter((c) => !certFilter || c.name.toLowerCase().includes(certFilter) || c.authority.toLowerCase().includes(certFilter));
+      const fullCertDisplay = showAllCerts || visibleCerts.length <= certDisplayLimit ? visibleCerts : visibleCerts.slice(0, certDisplayLimit);
+      fullCertDisplay.forEach((c) => {
         const el = document.createElement('div');
         el.className = 'list-item';
-        el.innerHTML = `<strong>${c.name}</strong><div class="meta">${c.authority}</div><div style="margin-top:6px"><a href="${c.url}" target="_blank">${currentLang === 'en' ? 'View certificate' : 'Ver certificación'}</a></div>`;
+        if (c.url) {
+          el.innerHTML = `<strong>${c.name}</strong><div class="meta">${c.authority}</div><div style="margin-top:6px"><a href="${c.url}" target="_blank">${currentLang === 'en' ? 'View certificate' : 'Ver certificación'}</a></div>`;
+        } else {
+          el.innerHTML = `<strong>${c.name}</strong><div class="meta">${c.authority}</div><div style="margin-top:6px;color:var(--muted);font-size:.95rem">${currentLang === 'en' ? 'Certificate link not available; inquire for details' : 'Enlace de certificación no disponible; consulta para más detalles'}</div>`;
+        }
         certList.appendChild(el);
       });
+
+      const certAction = document.getElementById('cert-action');
+      certAction.innerHTML = '';
+      if (visibleCerts.length > certDisplayLimit) {
+        const showMoreButton = document.createElement('button');
+        showMoreButton.className = 'btn btn-secondary';
+        showMoreButton.textContent = showAllCerts ? data.labels.showLessCerts : data.labels.showMoreCerts;
+        showMoreButton.onclick = () => {
+          showAllCerts = !showAllCerts;
+          render();
+        };
+        certAction.appendChild(showMoreButton);
+      }
+
+      document.getElementById('certFilter').placeholder = data.labels.certFilterPlaceholder;
 
       const coursesList = document.getElementById('courses-list');
       coursesList.innerHTML = '';
@@ -509,6 +543,12 @@
         span.innerText = skill;
         skillsContainer.appendChild(span);
       });
+    }
+
+    function updateCertFilter() {
+      certFilter = document.getElementById('certFilter').value.toLowerCase();
+      showAllCerts = false;
+      render();
     }
 
     document.querySelectorAll('.lang-btn').forEach((btn) => {
