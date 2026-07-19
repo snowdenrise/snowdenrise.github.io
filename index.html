@@ -1,45 +1,246 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bienvenidos a Hyperblog 2.0</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jonatan Serna — Interactive CV</title>
+  <meta name="description" content="Interactive CV for Jonatan Serna — UX Researcher & Data Analyst">
+  <style>
+    :root{
+      --bg:#070b16;
+      --bg-soft:#0f172a;
+      --card:rgba(255,255,255,0.08);
+      --card-strong:rgba(255,255,255,0.12);
+      --accent:#4fd1ff;
+      --accent-2:#8b5cf6;
+      --accent-3:#ff7b72;
+      --text:#f8fbff;
+      --muted:#9fb0c8;
+      --border:rgba(255,255,255,0.14);
+      color-scheme:dark;
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;min-height:100%;font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:radial-gradient(circle at top left, rgba(79,209,255,0.18), transparent 26%), radial-gradient(circle at top right, rgba(139,92,246,0.2), transparent 24%), linear-gradient(135deg,#060914 0%,#0b1020 45%,#111b31 100%);color:var(--text)}
+    body{padding:24px 18px 48px}
+    a{color:inherit}
+    .page{max-width:1200px;margin:0 auto}
+    .hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:24px;align-items:center;background:linear-gradient(135deg,rgba(79,209,255,0.16),rgba(139,92,246,0.12));border:1px solid var(--border);border-radius:28px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
+    .eyebrow{display:inline-block;margin-bottom:10px;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,0.12);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#dceeff}
+    h1{margin:8px 0 10px;font-size:clamp(1.9rem,3.1vw,2.8rem)}
+    .lead{font-size:1.02rem;line-height:1.7;color:var(--muted);max-width:700px}
+    .profile-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-top:18px}
+    .avatar{width:132px;height:132px;border-radius:24px;overflow:hidden;border:3px solid rgba(255,255,255,0.22);box-shadow:0 12px 40px rgba(0,0,0,0.24)}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .pill{display:inline-flex;align-items:center;gap:6px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,0.1);font-size:13px;border:1px solid rgba(255,255,255,0.12)}
+    .button-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;padding:10px 14px;border-radius:999px;font-weight:700;border:1px solid transparent;transition:transform .2s ease, box-shadow .2s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;box-shadow:0 12px 26px rgba(79,209,255,.18)}
+    .btn-secondary{background:rgba(255,255,255,0.1);color:white;border-color:rgba(255,255,255,0.16)}
+    .btn-sponsor{background:linear-gradient(90deg,var(--accent-3),#ffb453);color:white;box-shadow:0 12px 26px rgba(255,123,114,.18)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+    .stat{padding:14px;border-radius:16px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08)}
+    .stat strong{display:block;font-size:1.2rem;margin-bottom:4px}
+    .stat span{font-size:.9rem;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px;margin-top:22px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:22px;padding:22px;box-shadow:0 10px 40px rgba(0,0,0,0.22)}
+    .card h2,.card h3{margin-top:0;margin-bottom:10px;font-size:1.1rem}
+    .intro{font-size:1rem;line-height:1.7;color:#dce8f6}
+    .timeline{display:grid;gap:12px;margin-top:12px}
+    .job{padding:14px 14px 12px;border-radius:16px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07)}
+    .job strong{display:block;font-size:1rem}
+    .meta{font-size:.9rem;color:var(--muted);margin-top:4px}
+    .job p{margin:8px 0 0;color:#dce8f6;line-height:1.5}
+    .skills-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+    .skill{display:inline-block;padding:8px 10px;border-radius:999px;background:rgba(79,209,255,0.12);border:1px solid rgba(79,209,255,0.2);color:#cfeeff;font-size:.92rem}
+    .skill.active{background:rgba(139,92,246,0.16);border-color:rgba(139,92,246,0.24)}
+    .search{width:100%;padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.06);color:var(--text);margin-bottom:10px}
+    .search::placeholder{color:#8aa0b8}
+    .list{display:grid;gap:10px;margin-top:12px}
+    .list-item{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.07)}
+    .list-item a{color:#8edbff;text-decoration:none}
+    .contact{display:grid;gap:10px}
+    .contact a{color:#dceeff;text-decoration:none}
+    .muted{color:var(--muted)}
+    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:.95rem}
+    @media(max-width:900px){.hero,.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}} 
+    @media(max-width:620px){body{padding:14px 12px 30px}.hero{padding:20px}.stats{grid-template-columns:1fr}}
+  </style>
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-W9NG8NTTQR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      
-        gtag('config', 'G-W9NG8NTTQR');
-        </script>-->
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
 <body>
-<div align="left" class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark" data-type="HORIZONTAL" data-vanity="jonatanserna" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://co.linkedin.com/in/jonatanserna/en?trk=profile-badge">Jonatan Serna</a></div>
-  <div id="container">
-      <div id="cabecera">Hyperblog
-        <span id="tagline">
-          Tu Blog de cabecera
-        </span>
+  <main class="page">
+    <section class="hero">
+      <div>
+        <div class="eyebrow">UX Research • Data Analysis • Product Strategy</div>
+        <h1>Jonatan Serna</h1>
+        <p class="lead" id="profile-summary">Loading profile...</p>
+        <div class="profile-row">
+          <div class="avatar"><img src="https://github.com/snowdenrise.png" alt="Jonatan Serna"></div>
+          <div>
+            <div class="pill">📊 Data-driven decisions</div>
+            <div class="pill" style="margin-top:8px">🧠 Research-led product thinking</div>
+          </div>
+        </div>
+        <div class="button-row">
+          <a class="btn btn-primary" href="https://github.com/snowdenrise" target="_blank">View GitHub</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/jonatanserna" target="_blank">LinkedIn</a>
+          <a class="btn btn-sponsor" href="https://github.com/sponsors/snowdenrise" target="_blank">Sponsor on GitHub</a>
+        </div>
       </div>
-      <div id="post">
-        <h1>Titulo llamativo</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima molestias voluptas soluta nihil quia eum debitis voluptate! Corporis iusto soluta accusamus vitae quod cupiditate numquam, sequi dolor harum, sint accusantium.</p>
-        <p>Agregamos contenido al body de este blog para que se puedan hacer los merges</p>
-        <p>Agregando aun mas contenido</p>
-        <p>Añadiendo otro parrafoooooooooooooooooooooo</p>
-        <p>Suscribete y dale like!</p>
+      <div>
+        <div class="stats">
+          <div class="stat"><strong id="stat-years">8+</strong><span>Years across analytics and research</span></div>
+          <div class="stat"><strong id="stat-companies">10+</strong><span>Teams and companies</span></div>
+          <div class="stat"><strong id="stat-skills">20+</strong><span>Core tools and skills</span></div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <h3>What I do</h3>
+          <p class="intro">I turn qualitative research, product questions, and business data into clear insights that help teams make smarter decisions.</p>
+        </div>
       </div>
-  </div>
+    </section>
 
-<!-- Calendly badge widget begin -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/jonatansernahiguera?hide_gdpr_banner=1', text: 'Schedule time with me', color: '#0069ff', textColor: '#ffffff', branding: true }); }</script>
-<!-- Calendly badge widget end -->
+    <section class="grid">
+      <div>
+        <div class="card" id="about">
+          <h2>About</h2>
+          <p class="intro">I combine UX research, data analysis, visualization, and experimentation to support product and growth decisions with evidence and clarity.</p>
+          <div class="timeline" id="exp-list"></div>
+        </div>
+
+        <div class="card" id="experience" style="margin-top:20px">
+          <h2>Experience</h2>
+          <div class="timeline" id="experience-list"></div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card" id="skills">
+          <h3>Skills</h3>
+          <input class="search" id="skillFilter" placeholder="Filter skills" oninput="filterSkills()">
+          <div class="skills-wrap" id="skills-container"></div>
+        </div>
+
+        <div class="card" id="education" style="margin-top:20px">
+          <h3>Education</h3>
+          <div class="list" id="edu-list"></div>
+        </div>
+
+        <div class="card" id="certs" style="margin-top:20px">
+          <h3>Certifications</h3>
+          <div class="list" id="cert-list"></div>
+        </div>
+
+        <div class="card" style="margin-top:20px">
+          <h3>Contact</h3>
+          <div class="contact">
+            <span class="muted">Email: <a href="mailto:jonatansernahiguera@gmail.com">jonatansernahiguera@gmail.com</a></span>
+            <span class="muted">LinkedIn: <a href="https://www.linkedin.com/in/jonatanserna" target="_blank">jonatanserna</a></span>
+            <span class="muted">Calendly: <a href="https://calendly.com/jonatansernahiguera" target="_blank">Schedule a conversation</a></span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      Interactive CV built for GitHub Pages with a polished profile experience.
+    </footer>
+  </main>
+
+  <script>
+    const profile = {
+      name: "Jonatan Serna",
+      headline: "Data Analyst & UX Researcher",
+      summary: "I combine UX research, business analytics, and product thinking to turn data into clear and actionable insights."
+    };
+
+    const positions = [
+      {company:"Holafly",title:"Analista de datos e investigador de experiencia de usuarios (UXR)",location:"Colombia",start:"Feb 2024",end:"Apr 2026",desc:"Combining user research, analytics, and product insights to guide discovery and decision making."},
+      {company:"Wizeline",title:"Analista de datos III (Senior)",location:"Colombia",start:"Sep 2023",end:"May 2024",desc:"Built analytics views and supported teams with evidence-based reporting and insight extraction."},
+      {company:"Publicis Global Delivery (PGD)",title:"Data Analyst",location:"Colombia",start:"Jan 2024",end:"Feb 2024",desc:"Contributed to analytical workstreams and reporting for product and operations topics."},
+      {company:"Lean Solutions Group",title:"Analista de datos",location:"",start:"May 2023",end:"Sep 2023",desc:"Worked on data integrity, documentation, and visual insights for business decision-making."},
+      {company:"Lean Solutions Group",title:"Analista de datos junior",location:"Colombia",start:"Dec 2022",end:"Jun 2023",desc:""},
+      {company:"Lean Solutions Group",title:"Asistente de datos",location:"Colombia",start:"Jul 2022",end:"Dec 2022",desc:""},
+      {company:"Lean Solutions Group",title:"Coordinador de logística",location:"Barranquilla, Atlántico, Colombia",start:"Jan 2018",end:"Jul 2022",desc:"Managed operational processes and documentation across teams."}
+    ];
+
+    const education = [
+      {school:"Universidad del Atlántico",degree:"Arquitectura",start:"Aug 2015",end:"Dec 2026"},
+      {school:"Servicio Nacional de Aprendizaje (SENA)",degree:"Tecnólogo en Desarrollo de videojuegos",start:"2011",end:"2012"},
+      {school:"Corporación Educativa Alexander Von Humboltd",degree:"Diseñador Gráfico y web",start:"2007",end:"2010"},
+      {school:"Coderhouse",degree:"Diseñador UX/UI",start:"May 2024",end:"Sep 2025",notes:"UX/UI program"}
+    ];
+
+    const skills = [
+      "Cloud Computing","Green Building","Design","Adobe Analytics","Revit","Autodesk 3ds Max","Enscape","Blender","Autodesk Maya","AutoCAD","CorelDRAW","Data Visualization","Google Analytics","Google Ads","Google Sheets","User Interface (UI)","User Experience Research (UXR)","Figma","JavaScript","HTML","HTML5","CSS","Análisis de la información","Lenguaje de consulta (query)","Toma de decisiones basadas en datos","Amazon Athena","Amazon S3","AWS Glue","Amazon QuickSight","Python","Tableau","SQL","Microsoft Power BI","Pandas","Looker","Agile Methodologies","Alteryx","Power BI","Data Analysis","UX Research","Figma (Software)","Microsoft Excel"
+    ];
+
+    const certs = [
+      {name:"Google Data Analytics",url:"https://www.coursera.org/account/accomplishments/specialization/certificate/RL77SVQ23W6K",authority:"Google/Coursera"},
+      {name:"EF SET English Certificate (C1 Advanced)",url:"https://www.efset.org/cert/rNnBkv",authority:"EF SET"},
+      {name:"Power BI - Multiple courses",url:"https://www.udemy.com/",authority:"Udemy"},
+      {name:"Tableau Learning Path",url:"https://public.tableau.com/",authority:"Tableau"}
+    ];
+
+    document.getElementById('profile-summary').innerText = profile.summary;
+    document.getElementById('stat-years').innerText = '8+';
+    document.getElementById('stat-companies').innerText = positions.length + '+';
+    document.getElementById('stat-skills').innerText = skills.length + '+';
+
+    const experienceList = document.getElementById('experience-list');
+    positions.forEach((p) => {
+      const el = document.createElement('div');
+      el.className = 'job';
+      el.innerHTML = `<strong>${p.title}</strong><div class="meta">${p.company} • ${p.start} — ${p.end} • ${p.location}</div><p>${p.desc || ''}</p>`;
+      experienceList.appendChild(el);
+    });
+
+    const expList = document.getElementById('exp-list');
+    const featured = positions.slice(0, 3);
+    featured.forEach((p) => {
+      const el = document.createElement('div');
+      el.className = 'job';
+      el.innerHTML = `<strong>${p.title}</strong><div class="meta">${p.company} • ${p.start} — ${p.end}</div><p>${p.desc || ''}</p>`;
+      expList.appendChild(el);
+    });
+
+    const eduList = document.getElementById('edu-list');
+    education.forEach((e) => {
+      const el = document.createElement('div');
+      el.className = 'list-item';
+      el.innerHTML = `<strong>${e.school}</strong><div class="meta">${e.degree || ''} • ${e.start} — ${e.end}</div>`;
+      eduList.appendChild(el);
+    });
+
+    const certList = document.getElementById('cert-list');
+    certs.forEach((c) => {
+      const el = document.createElement('div');
+      el.className = 'list-item';
+      el.innerHTML = `<strong>${c.name}</strong><div class="meta">${c.authority}</div><div style="margin-top:6px"><a href="${c.url}" target="_blank">View certificate</a></div>`;
+      certList.appendChild(el);
+    });
+
+    const skillsContainer = document.getElementById('skills-container');
+    function renderSkills(list) {
+      skillsContainer.innerHTML = '';
+      list.forEach((s, index) => {
+        const span = document.createElement('span');
+        span.className = 'skill' + (index < 6 ? ' active' : '');
+        span.innerText = s;
+        skillsContainer.appendChild(span);
+      });
+    }
+    renderSkills(skills);
+
+    function filterSkills() {
+      const q = document.getElementById('skillFilter').value.toLowerCase();
+      if (!q) {
+        renderSkills(skills);
+        return;
+      }
+      renderSkills(skills.filter(s => s.toLowerCase().includes(q)));
+    }
+  </script>
 </body>
 </html>
