@@ -3,96 +3,196 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Jonatan Serna — UX Researcher & Data Analyst</title>
-  <meta name="description" content="Jonatan Serna — UX Researcher & Data Analyst. SQL, Python, Power BI, Tableau, Google Data Studio, UX Research, Data Warehousing">
+  <title>Jonatan Serna — Interactive CV</title>
+  <meta name="description" content="Interactive CV for Jonatan Serna — UX Researcher & Data Analyst">
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#0069ff;--muted:#94a3b8;color-scheme:dark}
-    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,system-ui,Arial;background:linear-gradient(180deg,#071022 0%, #081428 60%);color:#e6eef8}
-    .wrap{max-width:960px;margin:40px auto;padding:28px}
+    :root{--bg:#071127;--card:#0b1220;--accent:#0b84ff;--muted:#9fb0c8;color-scheme:dark}
+    html,body{height:100%;margin:0;font-family:Inter,Segoe UI,system-ui,Arial;background:linear-gradient(180deg,#061021 0%, #081428 70%);color:#e6eef8}
+    .wrap{max-width:1100px;margin:32px auto;padding:26px}
     header{display:flex;gap:20px;align-items:center}
-    .avatar{width:120px;height:120px;border-radius:12px;flex:0 0 120px;overflow:hidden;border:3px solid rgba(255,255,255,.06)}
+    .avatar{width:120px;height:120px;border-radius:14px;overflow:hidden;border:3px solid rgba(255,255,255,.06)}
     .avatar img{width:100%;height:100%;object-fit:cover}
-    .hero h1{margin:0;font-size:28px}
-    .hero p.lead{margin:6px 0 12px;color:var(--muted)}
-    .badges{display:flex;gap:8px;flex-wrap:wrap}
-    .card{background:rgba(255,255,255,.03);padding:18px;border-radius:12px;margin-top:20px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
-    ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px}
-    ul.skills li{background:rgba(255,255,255,.04);padding:8px 10px;border-radius:8px;font-size:14px}
-    .cta{margin-top:14px}
-    a.btn{display:inline-block;background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none}
-    footer{margin-top:28px;color:var(--muted);font-size:13px}
-    @media (max-width:600px){header{flex-direction:column;align-items:flex-start}.avatar{width:96px;height:96px}}
+    .hero h1{margin:0;font-size:26px}
+    .lead{color:var(--muted);margin-top:6px}
+    nav{display:flex;gap:8px;margin-top:14px}
+    nav button{background:transparent;border:1px solid rgba(255,255,255,.05);color:var(--muted);padding:8px 12px;border-radius:8px;cursor:pointer}
+    .card{background:rgba(255,255,255,.025);padding:18px;border-radius:12px;margin-top:18px}
+    .columns{display:grid;grid-template-columns:2fr 1fr;gap:16px}
+    .section{margin-bottom:14px}
+    .job{padding:10px;border-radius:8px;background:rgba(255,255,255,.02);margin-bottom:8px}
+    .skill{display:inline-block;background:rgba(11,132,255,.12);color:var(--accent);padding:6px 8px;border-radius:6px;margin:4px;font-size:13px}
+    .muted{color:var(--muted)}
+    .btn{display:inline-block;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600;border:1px solid transparent}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-sponsor{background:linear-gradient(90deg,#ff6b6b,#ffba69);color:#fff;box-shadow:0 8px 20px rgba(255,107,107,.2)}
+    input.search{width:100%;padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,.04);background:transparent;color:inherit}
+    footer{margin-top:22px;color:var(--muted);font-size:13px}
+    @media(max-width:900px){.columns{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <main class="wrap">
     <header>
       <div class="avatar"><img src="https://github.com/snowdenrise.png" alt="Jonatan Serna"></div>
-      <div class="hero">
-        <h1>Jonatan Serna — UX Researcher & Data Analyst</h1>
-        <p class="lead">Detail-focused researcher combining data engineering, analytics and human-centered design to solve product problems.</p>
-        <div class="badges">
-          <a class="btn" href="mailto:jonatansernahiguera@gmail.com">Email</a>
-          <a class="btn" href="https://www.linkedin.com/in/jonatanserna" target="_blank">LinkedIn</a>
-          <a class="btn" href="https://calendly.com/jonatansernahiguera" target="_blank">Book time</a>
-          <a class="btn" href="https://github.com/sponsors/snowdenrise" target="_blank">Sponsor</a>
-        </div>
+      <div>
+        <h1>Jonatan Serna</h1>
+        <div class="lead">Data Analyst & UX Researcher — I combine qualitative research with quantitative analysis to guide product decisions.</div>
+        <nav>
+          <button onclick="show('about')">About</button>
+          <button onclick="show('experience')">Experience</button>
+          <button onclick="show('education')">Education</button>
+          <button onclick="show('skills')">Skills</button>
+          <button onclick="show('certs')">Certifications</button>
+          <a class="btn btn-primary" href="https://github.com/snowdenrise" target="_blank">View GitHub</a>
+          <a class="btn btn-sponsor" href="https://github.com/sponsors/snowdenrise" target="_blank">Sponsor on GitHub</a>
+        </nav>
       </div>
     </header>
 
-    <section class="card">
-      <h2>About</h2>
-      <p>UX Researcher & Data Analyst with experience in SQL, Python, Power BI, Tableau and data warehousing. Skilled at turning research and analytics into product-ready insights.</p>
-      <div class="grid">
-        <div>
+    <div class="columns">
+      <div>
+        <section id="about" class="card section">
+          <h2>About</h2>
+          <p id="profile-summary">Loading profile...</p>
+        </section>
+
+        <section id="experience" class="card section" style="display:none">
+          <h2>Experience</h2>
+          <div id="exp-list">Loading roles...</div>
+        </section>
+
+        <section id="education" class="card section" style="display:none">
+          <h2>Education</h2>
+          <div id="edu-list">Loading education...</div>
+        </section>
+
+        <section id="certs" class="card section" style="display:none">
+          <h2>Certifications</h2>
+          <div id="cert-list">Loading certifications...</div>
+        </section>
+      </div>
+
+      <aside>
+        <div class="card section" id="skills" style="display:none">
           <h3>Skills</h3>
-          <ul class="skills">
-            <li>SQL</li><li>Python (pandas)</li><li>Power BI</li><li>Tableau</li><li>Google Data Studio</li>
-            <li>UX Research</li><li>Figma</li><li>Data Warehousing</li>
-          </ul>
+          <input class="search" id="skillFilter" placeholder="Filter skills" oninput="filterSkills()" />
+          <div id="skills-container" style="margin-top:10px"></div>
         </div>
-        <div>
-          <h3>Highlights</h3>
-          <ul>
-            <li>Currently at Holafly — UX Researcher & Data Analyst</li>
-            <li>Public dashboards and visualizations (Tableau, Looker Studio)</li>
-            <li>Certificates: Coursera, Platzi, Udemy</li>
-          </ul>
-        </div>
-      </div>
-    </section>
 
-    <section class="card">
-      <h2>Featured Projects</h2>
-      <div class="grid">
-        <div>
-          <strong>GitHub</strong>
-          <p><a href="https://github.com/snowdenrise" target="_blank">github.com/snowdenrise</a></p>
+        <div class="card section">
+          <h3>Contact</h3>
+          <p class="muted">Email: <a href="mailto:jonatansernahiguera@gmail.com">jonatansernahiguera@gmail.com</a></p>
+          <p class="muted">LinkedIn: <a href="https://www.linkedin.com/in/jonatanserna" target="_blank">jonatanserna</a></p>
+          <p class="muted">Schedule: <a href="https://calendly.com/jonatansernahiguera" target="_blank">Calendly</a></p>
+          <p style="margin-top:8px"><a class="btn btn-sponsor" href="https://github.com/sponsors/snowdenrise" target="_blank">Sponsor on GitHub</a></p>
         </div>
-        <div>
-          <strong>Tableau</strong>
-          <p><a href="https://public.tableau.com/app/profile/jonatan1623" target="_blank">Public Profile</a></p>
-        </div>
-        <div>
-          <strong>Looker Studio</strong>
-          <p><a href="https://lookerstudio.google.com/reporting/9314cf26-29fb-46a4-abf5-cce5df7999d1" target="_blank">Interactive Dashboards</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>Get in touch</h2>
-      <p>Email: <a href="mailto:jonatansernahiguera@gmail.com">jonatansernahiguera@gmail.com</a></p>
-      <p>More: <a href="https://www.behance.net/jonatanserna">Behance</a> • <a href="https://dribbble.com/jonatanserna">Dribbble</a></p>
-    </section>
+      </aside>
+    </div>
 
     <footer>
-      <p>Built with ❤️ — <a href="https://github.com/snowdenrise/snowdenrise.github.io" target="_blank">Repository</a></p>
+      <p class="muted">Interactive CV generated from your LinkedIn export. Edit content in the repository to update.</p>
     </footer>
   </main>
 
-  <!-- LinkedIn profile badge (keeps privacy: just link) -->
-  <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+  <script>
+    // Data pulled from LinkedIn CSV exports (embedded here for the static site)
+    const profile = {
+      name: "Jonatan Serna",
+      headline: "Data Analyst & UX Researcher",
+      summary: `Mi Trayectoria como Analista de Datos: En mi papel como Analista de Datos, emprendo un viaje de descubrimiento y transformación, desvelando tesoros ocultos dentro de los conjuntos de datos. Armado con un conjunto de herramientas que incluye SQL, estadísticas descriptivas, Power BI y Google Data Studio, me sumerjo en el mundo de los datos. Descifro las historias ocultas en los números, pintando un cuadro vívido de tendencias y patrones.`
+    };
+
+    const positions = [
+      {company:"Holafly",title:"Analista de datos e investigador de experiencia de usuarios (UXR)",location:"Colombia",start:"Feb 2024",end:"Apr 2026",desc:`Como Analista Senior de Experiencia de Usuario (UX) y Datos, combino investigación de experiencia de usuario con análisis de datos para guiar productos y procesos.`},
+      {company:"Wizeline",title:"Analista de datos III (Senior)",location:"Colombia",start:"Sep 2023",end:"May 2024",desc:"Diseño e implemento paneles de análisis empresarial y apoyo a equipos en la extracción de insights."},
+      {company:"Publicis Global Delivery (PGD)",title:"Data Analyst",location:"Colombia",start:"Jan 2024",end:"Feb 2024",desc:""},
+      {company:"Lean Solutions Group",title:"Analista de datos",location:"",start:"May 2023",end:"Sep 2023",desc:"Investigación y resolución de integridad de datos; documentación y visualización de insights."},
+      {company:"Lean Solutions Group",title:"Analista de datos junior",location:"Colombia",start:"Dec 2022",end:"Jun 2023",desc:""},
+      {company:"Lean Solutions Group",title:"Asistente de datos",location:"Colombia",start:"Jul 2022",end:"Dec 2022",desc:""},
+      {company:"Lean Solutions Group",title:"Coordinador de logística",location:"Barranquilla, Atlántico, Colombia",start:"Jan 2018",end:"Jul 2022",desc:"Gestión logística y documentación de procesos."},
+      {company:"Northern Refrigerated Transportation",title:"Asistente de quejas, reclamos y eventos",location:"Estados Unidos",start:"Dec 2021",end:"Jun 2022",desc:""},
+      {company:"Lean Staffing Solutions",title:"OS&D",location:"Barranquilla, Atlántico, Colombia",start:"Dec 2021",end:"Jun 2022",desc:""},
+      {company:"Lean Staffing Solutions",title:"Supervisor",location:"Barranquilla",start:"Oct 2018",end:"Nov 2021",desc:""},
+      {company:"Edge Logistics",title:"Supervisor de area",location:"Barranquilla, Colombia",start:"Oct 2018",end:"Nov 2021",desc:"Supervisión y análisis de métricas."},
+      {company:"Edge Logistics",title:"Especialista de operaciones",location:"United States",start:"Oct 2018",end:"Nov 2021",desc:"Planificación maestra, análisis de inventario y optimización."},
+      {company:"Edge Logistics",title:"Despachador",location:"United States",start:"Apr 2018",end:"Oct 2018",desc:""},
+      {company:"Lean Staffing Solutions",title:"Coordinador de logística",location:"Barranquilla",start:"Jan 2018",end:"Oct 2018",desc:""},
+      {company:"InXpress International",title:"Coordinador logistico aereo",location:"United States",start:"Mar 2018",end:"Apr 2018",desc:""},
+      {company:"AIT Worldwide Logistics",title:"LTL tracking dispatcher",location:"",start:"Jan 2018",end:"Apr 2018",desc:""},
+      {company:"Atlantic International BPO",title:"Representante de ventas",location:"Barranquilla",start:"Jul 2017",end:"Jan 2018",desc:""},
+      {company:"Greyhound Lines, Inc.",title:"Representante de ventas",location:"Estados Unidos",start:"Jul 2017",end:"Jan 2018",desc:""},
+      {company:"AT&T",title:"Especialista de calidad para soporte tecnico",location:"Estados Unidos",start:"Jan 2015",end:"Apr 2017",desc:"Aseguramiento de calidad, mejora de procesos y capacitación."},
+      {company:"Sutherland",title:"Especialista de Calidad",location:"Barranquilla",start:"Mar 2013",end:"Apr 2017",desc:"Monitoreo y planes de inspección de procesos."},
+      {company:"AT&T",title:"Especialista de Soporte Técnico",location:"Estados Unidos",start:"Mar 2013",end:"Jan 2015",desc:"Soporte técnico y atención al cliente."}
+    ];
+
+    const education = [
+      {school:"Universidad del Atlántico",degree:"Arquitectura",start:"Aug 2015",end:"Dec 2026"},
+      {school:"Servicio Nacional de Aprendizaje (SENA)",degree:"Tecnólogo en Desarrollo de videojuegos",start:"2011",end:"2012"},
+      {school:"Corporación Educativa Alexander Von Humboltd",degree:"Diseñador Gráfico y web",start:"2007",end:"2010"},
+      {school:"Coderhouse",degree:"Diseñador UX/UI",start:"May 2024",end:"Sep 2025",notes:"UX/UI program"}
+    ];
+
+    const skills = [
+      "Cloud Computing","Green Building","Design","Adobe Analytics","Revit","Autodesk 3ds Max","Enscape","Blender","Autodesk Maya","AutoCAD","CorelDRAW","Data Visualization","Google Analytics","Google Ads","Google Sheets","User Interface (UI)","User Experience Research (UXR)","Figma","JavaScript","HTML","HTML5","CSS","Análisis de la información","Lenguaje de consulta (query)","Toma de decisiones basadas en datos","Amazon Athena","Amazon S3","AWS Glue","Amazon QuickSight","Python","Tableau","SQL","Microsoft Power BI","Pandas","Looker","Agile Methodologies","Alteryx","Power BI","Data Analysis","UX Research","Figma (Software)","Microsoft Excel"
+    ];
+
+    const certs = [
+      {name:"Google Data Analytics",url:"https://www.coursera.org/account/accomplishments/specialization/certificate/RL77SVQ23W6K",authority:"Google/Coursera"},
+      {name:"EF SET English Certificate (C1 Advanced)",url:"https://www.efset.org/cert/rNnBkv",authority:"EF SET"},
+      {name:"Power BI - Multiple courses",url:"https://www.udemy.com/",authority:"Udemy"},
+      {name:"Tableau Learning Path",url:"https://public.tableau.com/",authority:"Tableau"}
+    ];
+
+    // Rendering
+    document.getElementById('profile-summary').innerText = profile.summary;
+
+    const expList = document.getElementById('exp-list');
+    positions.forEach(p => {
+      const el = document.createElement('div'); el.className='job';
+      el.innerHTML = `<strong>${p.title}</strong> — <em>${p.company}</em> <div class="muted" style="font-size:13px">${p.start} — ${p.end} • ${p.location}</div><p style="margin-top:6px">${p.desc || ''}</p>`;
+      expList.appendChild(el);
+    });
+
+    const eduList = document.getElementById('edu-list');
+    education.forEach(e=>{
+      const el=document.createElement('div'); el.className='job';
+      el.innerHTML=`<strong>${e.school}</strong> — <em>${e.degree || ''}</em><div class="muted" style="font-size:13px">${e.start} — ${e.end}</div>`;
+      eduList.appendChild(el);
+    });
+
+    const certList = document.getElementById('cert-list');
+    certs.forEach(c=>{
+      const el=document.createElement('div'); el.className='job';
+      el.innerHTML=`<strong>${c.name}</strong> <div class="muted">${c.authority}</div><div style="margin-top:6px"><a href="${c.url}" target="_blank">View certificate</a></div>`;
+      certList.appendChild(el);
+    });
+
+    const skillsContainer = document.getElementById('skills-container');
+    function renderSkills(list){
+      skillsContainer.innerHTML='';
+      list.forEach(s=>{const span=document.createElement('span');span.className='skill';span.innerText=s;skillsContainer.appendChild(span);});
+    }
+    renderSkills(skills);
+
+    function filterSkills(){
+      const q=document.getElementById('skillFilter').value.toLowerCase();
+      if(!q){renderSkills(skills);return}
+      renderSkills(skills.filter(s=>s.toLowerCase().includes(q)));
+    }
+
+    function show(id){
+      ['about','experience','education','skills','certs'].forEach(sec=>{
+        const el=document.getElementById(sec);
+        if(!el) return;
+        el.style.display = (sec===id) ? 'block' : 'none';
+      });
+      // move skills panel visibility (aside)
+      document.getElementById('skills').style.display = (id==='skills') ? 'block' : 'none';
+    }
+
+    // default view
+    show('about');
+  </script>
 </body>
 </html>
