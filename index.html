@@ -25,6 +25,9 @@
     body{padding:24px 18px 48px}
     a{color:inherit}
     .page{max-width:1200px;margin:0 auto}
+    .lang-switch{display:flex;justify-content:flex-end;gap:8px;margin-bottom:14px}
+    .lang-btn{padding:8px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.16);background:rgba(255,255,255,0.08);color:var(--text);cursor:pointer}
+    .lang-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));border-color:transparent}
     .hero{display:grid;grid-template-columns:1.15fr 0.85fr;gap:24px;align-items:center;background:linear-gradient(135deg,rgba(79,209,255,0.16),rgba(139,92,246,0.12));border:1px solid var(--border);border-radius:28px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,0.35)}
     .eyebrow{display:inline-block;margin-bottom:10px;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,0.12);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#dceeff}
     h1{margin:8px 0 10px;font-size:clamp(1.9rem,3.1vw,2.8rem)}
@@ -70,33 +73,38 @@
 </head>
 <body>
   <main class="page">
+    <div class="lang-switch" aria-label="Language selector">
+      <button class="lang-btn active" data-lang="en">English</button>
+      <button class="lang-btn" data-lang="es">Español</button>
+    </div>
+
     <section class="hero">
       <div>
-        <div class="eyebrow">UX Research • Data Analysis • Product Strategy</div>
-        <h1>Jonatan Serna</h1>
+        <div class="eyebrow" id="hero-eyebrow">UX Research • Data Analysis • Product Strategy</div>
+        <h1 id="hero-name">Jonatan Serna</h1>
         <p class="lead" id="profile-summary">Loading profile...</p>
         <div class="profile-row">
           <div class="avatar"><img src="https://github.com/snowdenrise.png" alt="Jonatan Serna"></div>
           <div>
-            <div class="pill">📊 Data-driven decisions</div>
-            <div class="pill" style="margin-top:8px">🧠 Research-led product thinking</div>
+            <div class="pill" id="hero-badge-1">📊 Data-driven decisions</div>
+            <div class="pill" id="hero-badge-2" style="margin-top:8px">🧠 Research-led product thinking</div>
           </div>
         </div>
         <div class="button-row">
-          <a class="btn btn-primary" href="https://github.com/snowdenrise" target="_blank">View GitHub</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/jonatanserna" target="_blank">LinkedIn</a>
-          <a class="btn btn-sponsor" href="https://github.com/sponsors/snowdenrise" target="_blank">Sponsor on GitHub</a>
+          <a class="btn btn-primary" id="btn-github" href="https://github.com/snowdenrise" target="_blank">View GitHub</a>
+          <a class="btn btn-secondary" id="btn-linkedin" href="https://www.linkedin.com/in/jonatanserna" target="_blank">LinkedIn</a>
+          <a class="btn btn-sponsor" id="btn-sponsor" href="https://github.com/sponsors/snowdenrise" target="_blank">Sponsor on GitHub</a>
         </div>
       </div>
       <div>
         <div class="stats">
-          <div class="stat"><strong id="stat-years">8+</strong><span>Years across analytics and research</span></div>
-          <div class="stat"><strong id="stat-companies">10+</strong><span>Teams and companies</span></div>
-          <div class="stat"><strong id="stat-skills">20+</strong><span>Core tools and skills</span></div>
+          <div class="stat"><strong id="stat-years">8+</strong><span id="stat-years-label">Years across analytics and research</span></div>
+          <div class="stat"><strong id="stat-companies">10+</strong><span id="stat-companies-label">Teams and companies</span></div>
+          <div class="stat"><strong id="stat-skills">20+</strong><span id="stat-skills-label">Core tools and skills</span></div>
         </div>
         <div class="card" style="margin-top:16px">
-          <h3>What I do</h3>
-          <p class="intro">I turn qualitative research, product questions, and business data into clear insights that help teams make smarter decisions.</p>
+          <h3 id="what-i-do">What I do</h3>
+          <p class="intro" id="hero-intro">I turn qualitative research, product questions, and business data into clear insights that help teams make smarter decisions.</p>
         </div>
       </div>
     </section>
@@ -104,143 +112,414 @@
     <section class="grid">
       <div>
         <div class="card" id="about">
-          <h2>About</h2>
-          <p class="intro">I combine UX research, data analysis, visualization, and experimentation to support product and growth decisions with evidence and clarity.</p>
+          <h2 id="about-title">About</h2>
+          <p class="intro" id="about-text">I combine UX research, data analysis, visualization, and experimentation to support product and growth decisions with evidence and clarity.</p>
           <div class="timeline" id="exp-list"></div>
         </div>
 
         <div class="card" id="experience" style="margin-top:20px">
-          <h2>Experience</h2>
+          <h2 id="experience-title">Experience</h2>
           <div class="timeline" id="experience-list"></div>
         </div>
       </div>
 
       <aside>
         <div class="card" id="skills">
-          <h3>Skills</h3>
+          <h3 id="skills-title">Skills</h3>
           <input class="search" id="skillFilter" placeholder="Filter skills" oninput="filterSkills()">
           <div class="skills-wrap" id="skills-container"></div>
         </div>
 
         <div class="card" id="education" style="margin-top:20px">
-          <h3>Education</h3>
+          <h3 id="education-title">Education</h3>
           <div class="list" id="edu-list"></div>
         </div>
 
         <div class="card" id="certs" style="margin-top:20px">
-          <h3>Certifications</h3>
+          <h3 id="certifications-title">Certifications</h3>
           <div class="list" id="cert-list"></div>
         </div>
 
+        <div class="card" id="courses" style="margin-top:20px">
+          <h3 id="courses-title">Courses</h3>
+          <div class="list" id="courses-list"></div>
+        </div>
+
         <div class="card" style="margin-top:20px">
-          <h3>Contact</h3>
-          <div class="contact">
-            <span class="muted">Email: <a href="mailto:jonatansernahiguera@gmail.com">jonatansernahiguera@gmail.com</a></span>
-            <span class="muted">LinkedIn: <a href="https://www.linkedin.com/in/jonatanserna" target="_blank">jonatanserna</a></span>
-            <span class="muted">Calendly: <a href="https://calendly.com/jonatansernahiguera" target="_blank">Schedule a conversation</a></span>
-          </div>
+          <h3 id="contact-title">Contact</h3>
+          <div class="contact" id="contact-list"></div>
         </div>
       </aside>
     </section>
 
     <footer>
-      Interactive CV built for GitHub Pages with a polished profile experience.
+      <span id="footer-text">Interactive CV built for GitHub Pages with a polished profile experience.</span>
     </footer>
   </main>
 
   <script>
-    const profile = {
-      name: "Jonatan Serna",
-      headline: "Data Analyst & UX Researcher",
-      summary: "I combine UX research, business analytics, and product thinking to turn data into clear and actionable insights."
+    const translations = {
+      en: {
+        profile: {
+          name: 'Jonatan Serna',
+          headline: 'Data Analyst & UX Researcher',
+          summary: 'I combine UX research, business analytics, and product thinking to turn data into clear and actionable insights.',
+          intro: 'I turn qualitative research, product questions, and business data into clear insights that help teams make smarter decisions.',
+          about: 'I combine UX research, data analysis, visualization, and experimentation to support product and growth decisions with evidence and clarity.'
+        },
+        labels: {
+          eyebrow: 'UX Research • Data Analysis • Product Strategy',
+          badge1: '📊 Data-driven decisions',
+          badge2: '🧠 Research-led product thinking',
+          whatIDo: 'What I do',
+          about: 'About',
+          experience: 'Experience',
+          skills: 'Skills',
+          education: 'Education',
+          certifications: 'Certifications',
+          courses: 'Courses',
+          contact: 'Contact',
+          viewGithub: 'View GitHub',
+          linkedin: 'LinkedIn',
+          sponsor: 'Sponsor on GitHub',
+          filterPlaceholder: 'Filter skills',
+          footer: 'Interactive CV built for GitHub Pages with a polished profile experience.'
+        },
+        stats: {
+          yearsLabel: 'Years across analytics and research',
+          companiesLabel: 'Teams and companies',
+          skillsLabel: 'Core tools and skills'
+        },
+        positions: [
+          {company:'Holafly',title:'Data Analyst & UX Researcher',location:'Colombia',start:'Feb 2024',end:'Apr 2026',desc:'Combining user research, analytics, and product insights to guide discovery and decision making.'},
+          {company:'Wizeline',title:'Senior Data Analyst',location:'Colombia',start:'Sep 2023',end:'May 2024',desc:'Built analytics views and supported teams with evidence-based reporting and insight extraction.'},
+          {company:'Publicis Global Delivery (PGD)',title:'Data Analyst',location:'Colombia',start:'Jan 2024',end:'Feb 2024',desc:'Contributed to analytical workstreams and reporting for product and operations topics.'},
+          {company:'Lean Solutions Group',title:'Data Analyst',location:'Barranquilla',start:'May 2023',end:'Sep 2023',desc:'Worked on data integrity, documentation, and visual insights for business decision-making.'}
+        ],
+        education: [
+          {school:'Universidad del Atlántico',degree:'Architecture',start:'Aug 2015',end:'Dec 2026'},
+          {school:'SENA',degree:'Technology in Game Development',start:'2011',end:'2012'},
+          {school:'Alexander Von Humboldt Educational Corporation',degree:'Graphic and Web Designer',start:'2007',end:'2010'},
+          {school:'Coderhouse',degree:'UX/UI Designer',start:'May 2024',end:'Sep 2025'}
+        ],
+        skills: [
+          'Cloud Computing','Design','Adobe Analytics','Revit','Autodesk 3ds Max','Enscape','Blender','Autodesk Maya','AutoCAD','CorelDRAW','Data Visualization','Google Analytics','Google Ads','Google Sheets','User Interface (UI)','User Experience Research (UXR)','Figma','JavaScript','HTML','HTML5','CSS','Data Analysis','Python','Tableau','SQL','Microsoft Power BI','Pandas','Looker','Agile Methodologies','Alteryx','Power BI','UX Research','Microsoft Excel'
+        ],
+        certs: [
+          {name:'Google Data Analytics',authority:'Google / Coursera',url:'https://www.coursera.org'},
+          {name:'EF SET English Certificate (C1 Advanced)',authority:'EF SET',url:'https://www.efset.org/cert/rNnBkv'},
+          {name:'Microsoft Excel Professional',authority:'Udemy',url:'https://www.udemy.com/'},
+          {name:'Power BI Essentials',authority:'Udemy',url:'https://www.udemy.com/'},
+          {name:'Tableau Essentials',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'SQL for Data Analysis',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Google Analytics Basics',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Power BI Dashboards and Reports',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Power BI Tricks and Techniques',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Figma for UX',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Agile User Experience Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Adobe Analytics Fundamentals',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'UX Research Foundations',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
+          {name:'Market Research',authority:'IE Business School',url:'https://www.ie.edu/'},
+          {name:'UX Writing',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
+          {name:'ConfOps 25: DesignOps',authority:'DesignOps Lab',url:'https://www.designopslab.com/'},
+          {name:'Conducting UX Research',authority:'Google',url:'https://www.google.com/'},
+          {name:'Data Protection and Governance',authority:'Platzi',url:'https://platzi.com/'},
+          {name:'Designing for Accessibility',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Adobe XD for Product Design',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Digital Logistics & Distribution',authority:'Cámara de Comercio',url:'https://drive.google.com'},
+          {name:'Basic Photography',authority:'Udemy',url:'https://www.udemy.com/'},
+          {name:'Adobe Certification',authority:'Certiport Latam',url:'https://www.certiport.com/'},
+          {name:'Lean Six Sigma White Belt',authority:'Minitab',url:'https://www.minitab.com/'},
+          {name:'Intro to UX for Product',authority:'Meta',url:'https://www.meta.com/'},
+          {name:'University Virtual Course',authority:'Sociedad Civil',url:'https://drive.google.com'},
+          {name:'UX/UI Design',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
+          {name:'UX Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Programming Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'MySQL Essentials',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Penetration Testing Fundamentals',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Learning Big Data',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Design Thinking',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'UX Design Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Google Foundations',authority:'Google',url:'https://www.google.com/'},
+          {name:'Preparing Data',authority:'Microsoft',url:'https://www.microsoft.com/'},
+          {name:'Harnessing Data',authority:'Microsoft',url:'https://www.microsoft.com/'},
+          {name:'Realistic Rendering',authority:'Jacobsen3D',url:'https://www.jacobsen3d.com/'}
+        ],
+        courses: [
+          {name:'UX/UI Design',provider:'Coderhouse',year:'2024'},
+          {name:'Data Analysis with Power BI',provider:'Udemy',year:'2024'},
+          {name:'Tableau Essentials',provider:'Tableau',year:'2024'},
+          {name:'Qlik Sense Essentials',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Looker Studio Fundamentals',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Power BI Dashboards',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Figma Essentials',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Illustrator Basics',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Photoshop Basics',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Google Analytics',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Advanced Excel and Formulas',provider:'LinkedIn Learning',year:'2023'},
+          {name:'SQL for Data Analysis',provider:'LinkedIn Learning',year:'2023'},
+          {name:'UX Foundations',provider:'LinkedIn Learning',year:'2024'},
+          {name:'Lo-fi to Hi-fi Prototyping',provider:'LinkedIn Learning',year:'2024'},
+          {name:'Design Thinking',provider:'LinkedIn Learning',year:'2024'},
+          {name:'Learning Big Data',provider:'LinkedIn Learning',year:'2024'},
+          {name:'Conduct UX Research',provider:'Google',year:'2025'},
+          {name:'Market Research',provider:'IE Business School',year:'2025'},
+          {name:'UX Writing',provider:'Coderhouse',year:'2025'},
+          {name:'ConfOps 25',provider:'DesignOps Lab',year:'2025'},
+          {name:'UX Research',provider:'Coderhouse',year:'2025'}
+        ],
+        contact: [
+          {label:'Email', value:'jonatansernahiguera@gmail.com', href:'mailto:jonatansernahiguera@gmail.com'},
+          {label:'Phone', value:'+57 300 877 4757', href:'tel:+573008774757'},
+          {label:'Location', value:'Barranquilla, Colombia', href:'#'},
+          {label:'LinkedIn', value:'linkedin.com/in/jonatanserna', href:'https://www.linkedin.com/in/jonatanserna'},
+          {label:'GitHub', value:'github.com/snowdenrise', href:'https://github.com/snowdenrise'},
+          {label:'Calendly', value:'Schedule a conversation', href:'https://calendly.com/jonatansernahiguera'}
+        ]
+      },
+      es: {
+        profile: {
+          name: 'Jonatan Serna',
+          headline: 'Analista de Datos e Investigador UX',
+          summary: 'Combino investigación UX, análisis de negocio y pensamiento de producto para convertir datos en ideas claras y accionables.',
+          intro: 'Transformo investigación cualitativa, preguntas de producto y datos en insights claros que ayudan a los equipos a tomar decisiones mejores.',
+          about: 'Combino investigación UX, análisis de datos, visualización y experimentación para apoyar decisiones de producto y crecimiento con evidencia y claridad.'
+        },
+        labels: {
+          eyebrow: 'Investigación UX • Análisis de Datos • Estrategia de Producto',
+          badge1: '📊 Decisiones basadas en datos',
+          badge2: '🧠 Pensamiento de producto guiado por investigación',
+          whatIDo: 'Qué hago',
+          about: 'Sobre mí',
+          experience: 'Experiencia',
+          skills: 'Habilidades',
+          education: 'Educación',
+          certifications: 'Certificaciones',
+          courses: 'Cursos',
+          contact: 'Contacto',
+          viewGithub: 'Ver GitHub',
+          linkedin: 'LinkedIn',
+          sponsor: 'Patrocinar en GitHub',
+          filterPlaceholder: 'Filtrar habilidades',
+          footer: 'CV interactivo creado para GitHub Pages con una experiencia de perfil más pulida.'
+        },
+        stats: {
+          yearsLabel: 'Años entre análisis e investigación',
+          companiesLabel: 'Equipos y compañías',
+          skillsLabel: 'Herramientas y habilidades clave'
+        },
+        positions: [
+          {company:'Holafly',title:'Analista de datos e investigador de experiencia de usuarios',location:'Colombia',start:'Feb 2024',end:'Apr 2026',desc:'Combino investigación de usuarios, análisis y perspectivas de producto para guiar descubrimiento y toma de decisiones.'},
+          {company:'Wizeline',title:'Analista de datos senior',location:'Colombia',start:'Sep 2023',end:'May 2024',desc:'Desarrollé vistas analíticas y apoyé equipos con reportes y extracción de insights basados en evidencia.'},
+          {company:'Publicis Global Delivery (PGD)',title:'Analista de datos',location:'Colombia',start:'Jan 2024',end:'Feb 2024',desc:'Contribuí a flujos analíticos y reportes para temas de producto y operaciones.'},
+          {company:'Lean Solutions Group',title:'Analista de datos',location:'Barranquilla',start:'May 2023',end:'Sep 2023',desc:'Trabajé en integridad de datos, documentación y visualización de insights para decisiones de negocio.'}
+        ],
+        education: [
+          {school:'Universidad del Atlántico',degree:'Arquitectura',start:'Ago 2015',end:'Dic 2026'},
+          {school:'SENA',degree:'Tecnólogo en Desarrollo de videojuegos',start:'2011',end:'2012'},
+          {school:'Corporación Educativa Alexander Von Humboldt',degree:'Diseñador Gráfico y Web',start:'2007',end:'2010'},
+          {school:'Coderhouse',degree:'Diseñador UX/UI',start:'May 2024',end:'Sep 2025'}
+        ],
+        skills: [
+          'Computación en la nube','Diseño','Adobe Analytics','Revit','Autodesk 3ds Max','Enscape','Blender','Autodesk Maya','AutoCAD','CorelDRAW','Visualización de datos','Google Analytics','Google Ads','Google Sheets','Interfaz de usuario (UI)','Investigación de experiencia de usuario (UXR)','Figma','JavaScript','HTML','HTML5','CSS','Análisis de datos','Python','Tableau','SQL','Microsoft Power BI','Pandas','Looker','Metodologías ágiles','Alteryx','Power BI','Investigación UX','Microsoft Excel'
+        ],
+        certs: [
+          {name:'Google Data Analytics',authority:'Google / Coursera',url:'https://www.coursera.org/account/accomplishments/specialization/certificate/RL77SVQ23W6K'},
+          {name:'Certificado EF SET English (C1 Advanced)',authority:'EF SET',url:'https://www.efset.org/cert/rNnBkv'},
+          {name:'Microsoft Excel Professional',authority:'Udemy',url:'https://www.udemy.com/'},
+          {name:'Power BI Essentials',authority:'Udemy',url:'https://www.udemy.com/'},
+          {name:'Tableau Essentials',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'SQL for Data Analysis',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Google Analytics Basics',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Power BI Dashboards & Reports',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Power BI Tricks & Techniques',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Figma for UX',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Agile User Experience Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Adobe Analytics Fundamentals',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'UX Research Foundations',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
+          {name:'Market Research',authority:'IE Business School',url:'https://www.ie.edu/'},
+          {name:'UX Writing',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
+          {name:'ConfOps 25: DesignOps',authority:'DesignOps Lab',url:'https://www.designopslab.com/'},
+          {name:'Conducting UX Research',authority:'Google',url:'https://www.google.com/'},
+          {name:'Data Protection & Governance',authority:'Platzi',url:'https://platzi.com/'},
+          {name:'Designing for Accessibility',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Adobe XD for Product Design',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Digital Logistics & Distribution',authority:'Cámara de Comercio',url:'https://drive.google.com'},
+          {name:'Basic Photography',authority:'Udemy',url:'https://www.udemy.com/'},
+          {name:'Adobe Certification',authority:'Certiport Latam',url:'https://www.certiport.com/'},
+          {name:'Lean Six Sigma White Belt',authority:'Minitab',url:'https://www.minitab.com/'},
+          {name:'Intro to UX for Product',authority:'Meta',url:'https://www.meta.com/'},
+          {name:'University Virtual Course',authority:'Sociedad Civil',url:'https://drive.google.com'},
+          {name:'UX/UI Design',authority:'Coderhouse',url:'https://www.coderhouse.com/'},
+          {name:'UX Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Programming Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'MySQL Essentials',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Penetration Testing Fundamentals',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Learning Big Data',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Design Thinking',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'UX Design Foundations',authority:'LinkedIn Learning',url:'https://www.linkedin.com/learning/'},
+          {name:'Google Foundations',authority:'Google',url:'https://www.google.com/'},
+          {name:'Preparing Data',authority:'Microsoft',url:'https://www.microsoft.com/'},
+          {name:'Harnessing Data',authority:'Microsoft',url:'https://www.microsoft.com/'},
+          {name:'Realistic Rendering',authority:'Jacobsen3D',url:'https://www.jacobsen3d.com/'}
+        ],
+        courses: [
+          {name:'Diseño UX/UI',provider:'Coderhouse',year:'2024'},
+          {name:'Análisis de datos con Power BI',provider:'Udemy',year:'2024'},
+          {name:'Fundamentos de Tableau',provider:'Tableau',year:'2024'},
+          {name:'Qlik Sense Essentials',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Looker Studio Fundamentals',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Power BI Dashboards',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Figma Essentials',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Illustrator Basics',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Photoshop Basics',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Google Analytics',provider:'LinkedIn Learning',year:'2023'},
+          {name:'Advanced Excel and Formulas',provider:'LinkedIn Learning',year:'2023'},
+          {name:'SQL for Data Analysis',provider:'LinkedIn Learning',year:'2023'},
+          {name:'UX Foundations',provider:'LinkedIn Learning',year:'2024'},
+          {name:'Lo-fi to Hi-fi Prototyping',provider:'LinkedIn Learning',year:'2024'},
+          {name:'Design Thinking',provider:'LinkedIn Learning',year:'2024'},
+          {name:'Learning Big Data',provider:'LinkedIn Learning',year:'2024'},
+          {name:'Conduct UX Research',provider:'Google',year:'2025'},
+          {name:'Market Research',provider:'IE Business School',year:'2025'},
+          {name:'UX Writing',provider:'Coderhouse',year:'2025'},
+          {name:'ConfOps 25',provider:'DesignOps Lab',year:'2025'},
+          {name:'UX Research',provider:'Coderhouse',year:'2025'}
+        ],
+        contact: [
+          {label:'Correo', value:'jonatansernahiguera@gmail.com', href:'mailto:jonatansernahiguera@gmail.com'},
+          {label:'Teléfono', value:'+57 300 877 4757', href:'tel:+573008774757'},
+          {label:'Ubicación', value:'Barranquilla, Colombia', href:'#'},
+          {label:'LinkedIn', value:'linkedin.com/in/jonatanserna', href:'https://www.linkedin.com/in/jonatanserna'},
+          {label:'GitHub', value:'github.com/snowdenrise', href:'https://github.com/snowdenrise'},
+          {label:'Calendly', value:'Agendar una conversación', href:'https://calendly.com/jonatansernahiguera'}
+        ]
+      }
     };
 
-    const positions = [
-      {company:"Holafly",title:"Analista de datos e investigador de experiencia de usuarios (UXR)",location:"Colombia",start:"Feb 2024",end:"Apr 2026",desc:"Combining user research, analytics, and product insights to guide discovery and decision making."},
-      {company:"Wizeline",title:"Analista de datos III (Senior)",location:"Colombia",start:"Sep 2023",end:"May 2024",desc:"Built analytics views and supported teams with evidence-based reporting and insight extraction."},
-      {company:"Publicis Global Delivery (PGD)",title:"Data Analyst",location:"Colombia",start:"Jan 2024",end:"Feb 2024",desc:"Contributed to analytical workstreams and reporting for product and operations topics."},
-      {company:"Lean Solutions Group",title:"Analista de datos",location:"",start:"May 2023",end:"Sep 2023",desc:"Worked on data integrity, documentation, and visual insights for business decision-making."},
-      {company:"Lean Solutions Group",title:"Analista de datos junior",location:"Colombia",start:"Dec 2022",end:"Jun 2023",desc:""},
-      {company:"Lean Solutions Group",title:"Asistente de datos",location:"Colombia",start:"Jul 2022",end:"Dec 2022",desc:""},
-      {company:"Lean Solutions Group",title:"Coordinador de logística",location:"Barranquilla, Atlántico, Colombia",start:"Jan 2018",end:"Jul 2022",desc:"Managed operational processes and documentation across teams."}
-    ];
+    let currentLang = 'en';
 
-    const education = [
-      {school:"Universidad del Atlántico",degree:"Arquitectura",start:"Aug 2015",end:"Dec 2026"},
-      {school:"Servicio Nacional de Aprendizaje (SENA)",degree:"Tecnólogo en Desarrollo de videojuegos",start:"2011",end:"2012"},
-      {school:"Corporación Educativa Alexander Von Humboltd",degree:"Diseñador Gráfico y web",start:"2007",end:"2010"},
-      {school:"Coderhouse",degree:"Diseñador UX/UI",start:"May 2024",end:"Sep 2025",notes:"UX/UI program"}
-    ];
+    function render() {
+      const data = translations[currentLang];
+      document.getElementById('hero-name').textContent = data.profile.name;
+      document.getElementById('profile-summary').textContent = data.profile.summary;
+      document.getElementById('hero-eyebrow').textContent = data.labels.eyebrow;
+      document.getElementById('hero-badge-1').textContent = data.labels.badge1;
+      document.getElementById('hero-badge-2').textContent = data.labels.badge2;
+      document.getElementById('btn-github').textContent = data.labels.viewGithub;
+      document.getElementById('btn-linkedin').textContent = data.labels.linkedin;
+      document.getElementById('btn-sponsor').textContent = data.labels.sponsor;
+      document.getElementById('what-i-do').textContent = data.labels.whatIDo;
+      document.getElementById('hero-intro').textContent = data.profile.intro;
+      document.getElementById('about-title').textContent = data.labels.about;
+      document.getElementById('about-text').textContent = data.profile.about;
+      document.getElementById('experience-title').textContent = data.labels.experience;
+      document.getElementById('skills-title').textContent = data.labels.skills;
+      document.getElementById('education-title').textContent = data.labels.education;
+      document.getElementById('certifications-title').textContent = data.labels.certifications;
+      document.getElementById('courses-title').textContent = data.labels.courses;
+      document.getElementById('contact-title').textContent = data.labels.contact;
+      document.getElementById('footer-text').textContent = data.labels.footer;
+      document.getElementById('skillFilter').placeholder = data.labels.filterPlaceholder;
+      document.getElementById('stat-years-label').textContent = data.stats.yearsLabel;
+      document.getElementById('stat-companies-label').textContent = data.stats.companiesLabel;
+      document.getElementById('stat-skills-label').textContent = data.stats.skillsLabel;
 
-    const skills = [
-      "Cloud Computing","Green Building","Design","Adobe Analytics","Revit","Autodesk 3ds Max","Enscape","Blender","Autodesk Maya","AutoCAD","CorelDRAW","Data Visualization","Google Analytics","Google Ads","Google Sheets","User Interface (UI)","User Experience Research (UXR)","Figma","JavaScript","HTML","HTML5","CSS","Análisis de la información","Lenguaje de consulta (query)","Toma de decisiones basadas en datos","Amazon Athena","Amazon S3","AWS Glue","Amazon QuickSight","Python","Tableau","SQL","Microsoft Power BI","Pandas","Looker","Agile Methodologies","Alteryx","Power BI","Data Analysis","UX Research","Figma (Software)","Microsoft Excel"
-    ];
+      document.getElementById('stat-years').textContent = '8+';
+      document.getElementById('stat-companies').textContent = data.positions.length + '+';
+      document.getElementById('stat-skills').textContent = data.skills.length + '+';
 
-    const certs = [
-      {name:"Google Data Analytics",url:"https://www.coursera.org/account/accomplishments/specialization/certificate/RL77SVQ23W6K",authority:"Google/Coursera"},
-      {name:"EF SET English Certificate (C1 Advanced)",url:"https://www.efset.org/cert/rNnBkv",authority:"EF SET"},
-      {name:"Power BI - Multiple courses",url:"https://www.udemy.com/",authority:"Udemy"},
-      {name:"Tableau Learning Path",url:"https://public.tableau.com/",authority:"Tableau"}
-    ];
+      const expList = document.getElementById('exp-list');
+      expList.innerHTML = '';
+      data.positions.slice(0, 3).forEach((p) => {
+        const el = document.createElement('div');
+        el.className = 'job';
+        el.innerHTML = `<strong>${p.title}</strong><div class="meta">${p.company} • ${p.start} — ${p.end}</div><p>${p.desc}</p>`;
+        expList.appendChild(el);
+      });
 
-    document.getElementById('profile-summary').innerText = profile.summary;
-    document.getElementById('stat-years').innerText = '8+';
-    document.getElementById('stat-companies').innerText = positions.length + '+';
-    document.getElementById('stat-skills').innerText = skills.length + '+';
+      const experienceList = document.getElementById('experience-list');
+      experienceList.innerHTML = '';
+      data.positions.forEach((p) => {
+        const el = document.createElement('div');
+        el.className = 'job';
+        el.innerHTML = `<strong>${p.title}</strong><div class="meta">${p.company} • ${p.start} — ${p.end} • ${p.location}</div><p>${p.desc}</p>`;
+        experienceList.appendChild(el);
+      });
 
-    const experienceList = document.getElementById('experience-list');
-    positions.forEach((p) => {
-      const el = document.createElement('div');
-      el.className = 'job';
-      el.innerHTML = `<strong>${p.title}</strong><div class="meta">${p.company} • ${p.start} — ${p.end} • ${p.location}</div><p>${p.desc || ''}</p>`;
-      experienceList.appendChild(el);
-    });
+      const eduList = document.getElementById('edu-list');
+      eduList.innerHTML = '';
+      data.education.forEach((e) => {
+        const el = document.createElement('div');
+        el.className = 'list-item';
+        el.innerHTML = `<strong>${e.school}</strong><div class="meta">${e.degree} • ${e.start} — ${e.end}</div>`;
+        eduList.appendChild(el);
+      });
 
-    const expList = document.getElementById('exp-list');
-    const featured = positions.slice(0, 3);
-    featured.forEach((p) => {
-      const el = document.createElement('div');
-      el.className = 'job';
-      el.innerHTML = `<strong>${p.title}</strong><div class="meta">${p.company} • ${p.start} — ${p.end}</div><p>${p.desc || ''}</p>`;
-      expList.appendChild(el);
-    });
+      const certList = document.getElementById('cert-list');
+      certList.innerHTML = '';
+      data.certs.forEach((c) => {
+        const el = document.createElement('div');
+        el.className = 'list-item';
+        el.innerHTML = `<strong>${c.name}</strong><div class="meta">${c.authority}</div><div style="margin-top:6px"><a href="${c.url}" target="_blank">${currentLang === 'en' ? 'View certificate' : 'Ver certificación'}</a></div>`;
+        certList.appendChild(el);
+      });
 
-    const eduList = document.getElementById('edu-list');
-    education.forEach((e) => {
-      const el = document.createElement('div');
-      el.className = 'list-item';
-      el.innerHTML = `<strong>${e.school}</strong><div class="meta">${e.degree || ''} • ${e.start} — ${e.end}</div>`;
-      eduList.appendChild(el);
-    });
+      const coursesList = document.getElementById('courses-list');
+      coursesList.innerHTML = '';
+      data.courses.forEach((c) => {
+        const el = document.createElement('div');
+        el.className = 'list-item';
+        el.innerHTML = `<strong>${c.name}</strong><div class="meta">${c.provider} • ${c.year}</div>`;
+        coursesList.appendChild(el);
+      });
 
-    const certList = document.getElementById('cert-list');
-    certs.forEach((c) => {
-      const el = document.createElement('div');
-      el.className = 'list-item';
-      el.innerHTML = `<strong>${c.name}</strong><div class="meta">${c.authority}</div><div style="margin-top:6px"><a href="${c.url}" target="_blank">View certificate</a></div>`;
-      certList.appendChild(el);
-    });
+      const contactList = document.getElementById('contact-list');
+      contactList.innerHTML = '';
+      data.contact.forEach((item) => {
+        const el = document.createElement('div');
+        el.className = 'list-item';
+        if (item.href && item.href !== '#') {
+          el.innerHTML = `<strong>${item.label}</strong><div class="meta"><a href="${item.href}" target="_blank">${item.value}</a></div>`;
+        } else {
+          el.innerHTML = `<strong>${item.label}</strong><div class="meta">${item.value}</div>`;
+        }
+        contactList.appendChild(el);
+      });
 
-    const skillsContainer = document.getElementById('skills-container');
-    function renderSkills(list) {
+      const skillsContainer = document.getElementById('skills-container');
       skillsContainer.innerHTML = '';
-      list.forEach((s, index) => {
+      data.skills.forEach((skill, index) => {
         const span = document.createElement('span');
         span.className = 'skill' + (index < 6 ? ' active' : '');
-        span.innerText = s;
+        span.innerText = skill;
         skillsContainer.appendChild(span);
       });
     }
-    renderSkills(skills);
 
     function filterSkills() {
-      const q = document.getElementById('skillFilter').value.toLowerCase();
-      if (!q) {
-        renderSkills(skills);
-        return;
-      }
-      renderSkills(skills.filter(s => s.toLowerCase().includes(q)));
+      const query = document.getElementById('skillFilter').value.toLowerCase();
+      const data = translations[currentLang];
+      const filtered = !query ? data.skills : data.skills.filter((skill) => skill.toLowerCase().includes(query));
+      const skillsContainer = document.getElementById('skills-container');
+      skillsContainer.innerHTML = '';
+      filtered.forEach((skill, index) => {
+        const span = document.createElement('span');
+        span.className = 'skill' + (index < 6 ? ' active' : '');
+        span.innerText = skill;
+        skillsContainer.appendChild(span);
+      });
     }
+
+    document.querySelectorAll('.lang-btn').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        currentLang = btn.getAttribute('data-lang');
+        document.querySelectorAll('.lang-btn').forEach((b) => b.classList.toggle('active', b === btn));
+        render();
+      });
+    });
+
+    render();
   </script>
 </body>
 </html>
